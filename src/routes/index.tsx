@@ -398,11 +398,11 @@ function LandingPage() {
             За 7 дней покажем, где клиника теряет деньги, подготовим маркетинговую систему и составим план дальнейшего роста.
           </p>
           <div className="mt-5 flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-brand tracking-tight">50 000 ₸</span>
-            <span className="text-sm text-ink-muted">стоимость участия</span>
+            <span className="text-3xl font-extrabold text-brand tracking-tight"></span>
+            <span className="text-sm text-ink-muted"></span>
           </div>
           <p className="mt-4 text-[14px] text-ink-muted">
-            Оставьте заявку — свяжемся с вами и согласуем старт тестовой недели.
+            Оставьте заявку свяжемся с вами и согласуем старт тестовой недели.
           </p>
           <div className="mt-5">
             <WaCta>Записаться на тестовую неделю</WaCta>
