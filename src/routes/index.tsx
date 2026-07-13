@@ -102,7 +102,7 @@ function LandingPage() {
           <span className="text-brand font-black block mt-2">всего за&nbsp; 50 000 ₸</span>
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          Вместо того чтобы сразу продавать рекламу, мы за 7 дней разбираем вашу клинику, находим слабые места и запускаем систему привлечения платных пациентов.
+          За 7 дней полностью погружаемся в работу вашей клиники, находим точки потери пациентов, запускаем рекламу и показываем, что именно нужно изменить, чтобы получать больше платных пациентов.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
