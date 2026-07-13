@@ -141,10 +141,10 @@ function LandingPage() {
       {/* 2 PROBLEM */}
       <Section className="bg-surface-2">
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему большинство клиник не получают результат от рекламы
+          Почему мы предлагаем сначала тестовую неделю?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Проблема редко в рекламе. Чаще всего деньги теряются намного раньше.
+          Потому что большинство клиник думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
         </p>
         <ul className="mt-6 space-y-3">
           {[
