@@ -296,7 +296,7 @@ function LandingPage() {
 
       {/* 7 OUTCOMES */}
       <Section className="bg-surface-2">
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">После недели вы получите</h2>
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что вы получите через 7 дней</h2>
         <ul className="mt-6 space-y-3">
           {[
             "Полную картину маркетинга клиники",
