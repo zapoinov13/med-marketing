@@ -98,7 +98,7 @@ function LandingPage() {
           Маркетинг для медицинских клиник
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
-          Как клиника получила <span className="text-brand font-black">+13 000 000 ₸</span> дополнительной выручки при том же рекламном бюджете?
+          Как клиника получила <span className="text-brand font-black block mt-2">+13 000 000 ₸</span> дополнительной выручки при том же рекламном бюджете?
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
           Вместо того чтобы сразу продавать рекламу, мы за 7 дней разбираем вашу клинику, находим слабые места и запускаем систему привлечения платных пациентов.
@@ -114,7 +114,7 @@ function LandingPage() {
           />
           <div>
             <div className="text-sm font-extrabold text-ink leading-tight">Юрий Валерьевич</div>
-            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу medical клиник · 6+ лет</div>
+            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу клиник · 5+ лет</div>
           </div>
         </div>
 
@@ -261,7 +261,7 @@ function LandingPage() {
             </p>
             <ul className="mt-5 space-y-3 text-[15px] text-ink border-t border-border/60 pt-5">
               {[
-                "Более 6 лет в медицинском маркетинге",
+                "Более 5 лет в медицинском маркетинге",
                 "Более 50 клиник работают по нашей системе",
                 "Коммерческий директор медицинского центра",
                 "Отвечаю за увеличение количества платных пациентов",
