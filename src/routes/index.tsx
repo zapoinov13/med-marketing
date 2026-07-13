@@ -162,7 +162,7 @@ function LandingPage() {
         </ul>
         <div className="mt-6 rounded-xl border border-destructive/10 bg-destructive/5 p-4 text-[15px] font-semibold text-ink leading-relaxed flex items-start gap-3.5 shadow-sm">
           <span className="text-lg shrink-0" aria-hidden>⚠️</span>
-          <span>Пока это не исправить увеличение бюджета ничего не меняет.</span>
+          <span>Поэтому мы сначала разбираем систему, а потом запускаем рекламу.</span>
         </div>
       </Section>
 
