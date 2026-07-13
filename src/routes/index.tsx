@@ -169,7 +169,7 @@ function LandingPage() {
       {/* 3 CASE */}
       <Section>
         <div className="text-xs font-semibold uppercase tracking-wider text-brand">Реальный кейс</div>
-        <h2 className="mt-2 text-2xl font-extrabold text-ink tracking-tight">Центр реабилитации в Павлодаре</h2>
+        <h2 className="mt-2 text-2xl font-extrabold text-ink tracking-tight">Как центр реабилитации получил +13 000 000 ₸ при том же рекламном бюджете</h2>
 
         <div className="mt-5 rounded-xl border-l-4 border-l-gold border border-border bg-surface-2/60 p-4 shadow-sm">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Запрос</div>
