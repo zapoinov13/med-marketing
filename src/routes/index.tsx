@@ -42,36 +42,27 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
 });
 
-function Check({ variant = "aqua" }: { variant?: "aqua" | "navy" }) {
-  const color = variant === "navy" ? "text-brand" : "text-accent-aqua";
+function Check() {
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className={`h-4 w-4 shrink-0 stroke-[3] ${color}`}
-      fill="none"
-      stroke="currentColor"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
+    <div className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand shadow-sm">
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3 w-3 stroke-[3]" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
   );
 }
 
 function Cross() {
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-4 w-4 shrink-0 stroke-[3] text-rose-400"
-      fill="none"
-      stroke="currentColor"
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-    </svg>
+    <div className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-destructive/10 text-destructive shadow-sm">
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-3 w-3 stroke-[3]" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
   );
 }
 
-function SectionWrap({
+function Section({
   children,
   className = "",
   id,
@@ -81,412 +72,354 @@ function SectionWrap({
   id?: string;
 }) {
   return (
-    <section id={id} className={`px-6 py-16 ${className}`}>
+    <section id={id} className={`px-5 py-12 ${className}`}>
       <div className="mx-auto max-w-[520px]">{children}</div>
     </section>
   );
 }
 
 function LandingPage() {
-  const problems = [
-    "Неправильное предложение",
-    "Нет пакетов лечения",
-    "Слабые сценарии",
-    "Администратор теряет пациентов",
-    "Нет аналитики",
-    "Никто не понимает, какая реклама приносит деньги",
-  ];
-
   const days = [
-    { n: 1, t: "Аудит клиники", d: "Проверяем текущую рекламу, объявления, посадочные страницы и точки потерь." },
-    { n: 2, t: "Анализ конкурентов", d: "Показываем, почему пациенты выбирают другие клиники." },
+    { n: 1, t: "Аудит клиники", d: "Проверяем текущую рекламу, объявления, посадочные страницы и точки потерь" },
+    { n: 2, t: "Анализ конкурентов", d: "Показываем, почему пациенты выбирают другие клиники.\n" },
     { n: 3, t: "Контент", d: "Пишем сценарии для видео, статичных креативов и каруселей." },
-    { n: 4, t: "Подготовка и запуск рекламы", d: "Создаём рекламные кампании и запускаем рекламу." },
-    { n: 5, t: "Аналитика", d: "Настраиваем контроль обращений с рекламы." },
+    { n: 4, t: "Подготовка и запуск рекламы", d: "Создаём рекламные кампании\u00a0\nи запускаем рекламу" },
+    { n: 5, t: "Аналитика", d: "Настраиваем контроль обращений с рекламы\u00a0" },
     { n: 6, t: "Рекомендации", d: "Считаем первые результаты." },
     { n: 7, t: "Финальная встреча", d: "Показываем: что нашли, что внедрили, что делать дальше." },
   ];
 
-  const outcomes = [
-    "Полную картину маркетинга клиники",
-    "План роста выручки",
-    "Новые рекламные офферы",
-    "Сценарии рекламы",
-    "План продвижения",
-    "Понимание, куда уходят деньги",
-    "Приоритетные задачи на ближайшие 30 дней",
-  ];
-
-  const forWhom = [
-    "Стоматологии",
-    "Косметологии",
-    "Реабилитационные центры",
-    "Многопрофильные клиники",
-    "Медицинские центры",
-    "Частные врачи",
-  ];
-
   return (
-    <main className="bg-brand text-ink pb-0">
+    <main className="pb-24">
       {/* 1 HERO */}
-      <section className="relative overflow-hidden bg-gradient-hero px-6 pt-14 pb-12">
-        <div className="pattern-grid absolute inset-0 opacity-40" aria-hidden="true" />
-        <div className="relative mx-auto max-w-[520px]">
-          <span className="inline-flex items-center rounded-full border border-accent-aqua/40 bg-brand-soft/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] text-accent-aqua">
-            Маркетинг для медицинских клиник
-          </span>
-
-          <h1
-            className="mt-6 text-[34px] font-bold leading-[1.05] tracking-tight text-white"
-          >
-            Тестовая неделя маркетинга для медицинской клиники{" "}
-            <span className="text-accent-aqua">всего за 50 000 ₸</span>
-          </h1>
-
-          <p className="mt-5 text-[15px] leading-relaxed text-ink-muted">
-            За 7 дней полностью погружаемся в работу вашей клиники, находим точки потери пациентов, запускаем рекламу и показываем, что именно нужно изменить, чтобы получать больше платных пациентов.
-          </p>
-
-          {/* Expert mini card */}
-          <div className="mt-7 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
-            <img
-              src="/yuri.jpg"
-              alt="Юрий Валерьевич"
-              width={48}
-              height={48}
-              className="h-12 w-12 shrink-0 rounded-full border-2 border-accent-aqua object-cover"
-            />
-            <div className="min-w-0">
-              <p className="text-sm font-bold text-white leading-tight">Юрий Валерьевич</p>
-              <p className="mt-0.5 text-[11px] uppercase tracking-wide text-brand-soft">
-                Эксперт по маркетингу клиник · 5+ лет
-              </p>
-            </div>
-          </div>
-
-          {/* Offer card */}
-          <div className="relative mt-6 overflow-hidden rounded-3xl bg-white p-6 text-brand shadow-card">
-            <div className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-accent-aqua/15 blur-2xl" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-brand-soft">
-              Специальное предложение
-            </p>
-            <div className="mt-2 flex items-baseline gap-2">
-              <span className="font-display text-4xl font-bold tracking-tight text-brand">50 000 ₸</span>
-              <span className="text-xs font-medium text-brand/60">стоимость участия</span>
-            </div>
-
-            <ul className="mt-6 space-y-3 text-[14.5px] font-semibold text-brand-mid">
-              <li className="flex items-start gap-3"><Check variant="navy" /><span>Работаем с вашей клиникой 7 дней</span></li>
-              <li className="flex items-start gap-3"><Check variant="navy" /><span>Не просто аудит, а реальные внедрения</span></li>
-              <li className="flex items-start gap-3"><Check variant="navy" /><span>В конце недели результаты и план что делать дальше</span></li>
-            </ul>
-
-            <div className="mt-7">
-              <WaCta className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-[15px] font-bold text-white transition-transform active:scale-[0.98]">
-                Записаться на тестовую неделю
-              </WaCta>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2 PROBLEMS */}
-      <SectionWrap className="bg-surface-2">
-        <h2 className="text-[26px] font-bold leading-tight tracking-tight text-white">
-          Почему мы предлагаем сначала тестовую неделю?
-        </h2>
-        <p className="mt-4 text-[15px] italic leading-relaxed text-ink-muted">
-          Потому что большинство клиник думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
+      <Section className="relative overflow-hidden pt-12">
+        <div className="bg-gradient-hero absolute inset-0 -z-10" aria-hidden="true" />
+        <span className="inline-flex items-center rounded-full bg-brand-soft px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand border border-brand/10">
+          Маркетинг для медицинских клиник
+        </span>
+        <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
+          Тестовая неделя маркетинга для медицинской клиники
+          <span className="text-brand font-black block mt-2">всего за&nbsp; 50 000 ₸</span>
+        </h1>
+        <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
+          За 7 дней полностью погружаемся в работу вашей клиники, находим точки потери пациентов, запускаем рекламу и показываем, что именно нужно изменить, чтобы получать больше платных пациентов.
         </p>
 
-        <ul className="mt-8 space-y-3">
-          {problems.map((t) => (
-            <li
-              key={t}
-              className="flex items-center gap-4 rounded-xl border border-white/5 bg-brand-mid/20 p-4 text-[14.5px] font-medium text-slate-200 transition-colors hover:border-accent-aqua/20"
-            >
-              <Cross />
-              <span>{t}</span>
+        <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
+          <img
+            src="/yuri.jpg"
+            alt="Юрий Валерьевич"
+            width={48}
+            height={48}
+            className="h-12 w-12 rounded-full object-cover ring-2 ring-brand/15 shadow-sm"
+          />
+          <div>
+            <div className="text-sm font-extrabold text-ink leading-tight">Юрий Валерьевич</div>
+            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу клиник · 5+ лет</div>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-3xl border border-brand/15 bg-card p-6 shadow-card transition-all duration-300 hover:shadow-lg ring-1 ring-brand/5">
+          <div className="text-xs font-bold uppercase tracking-wider text-ink-muted">
+            
+          </div>
+          <div className="mt-1 flex items-baseline gap-2">
+            <span className="text-4xl font-extrabold text-ink tracking-tight"></span>
+            <span className="text-sm text-ink-muted"></span>
+          </div>
+          <ul className="mt-5 space-y-3.5 text-[15px] text-ink">
+            <li className="flex items-start gap-3"><Check /> <span>Работаем с вашей клиникой 7 дней</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Не просто аудит, а реальные внедрения</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>В конце недели результаты и план что делать дальше</span></li>
+          </ul>
+          <div className="mt-6">
+            <WaCta>Записаться на тестовую неделю</WaCta>
+          </div>
+        </div>
+      </Section>
+
+      {/* 2 PROBLEM */}
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
+          Почему мы предлагаем сначала тестовую неделю?
+        </h2>
+        <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
+          Потому что большинство клиник думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
+        </p>
+        <ul className="mt-6 space-y-3">
+          {[
+            "Неправильное предложение",
+            "Нет пакетов лечения",
+            "Слабые сценарии",
+            "Администратор теряет пациентов",
+            "Нет аналитики",
+            "Никто не понимает, какая реклама приносит деньги",
+          ].map((t) => (
+            <li key={t} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
+              <Cross /> <span>{t}</span>
             </li>
           ))}
         </ul>
-
-        <div className="mt-8 flex items-start gap-3 rounded-xl border border-accent-aqua/20 bg-accent-aqua/5 p-4 text-[14px] leading-relaxed text-white">
-          <span className="text-lg leading-none" aria-hidden>⚡</span>
+        <div className="mt-6 rounded-xl border border-destructive/10 bg-destructive/5 p-4 text-[15px] font-semibold text-ink leading-relaxed flex items-start gap-3.5 shadow-sm">
+          <span className="text-lg shrink-0" aria-hidden>⚠️</span>
           <span>Поэтому мы сначала разбираем систему, а потом запускаем рекламу.</span>
         </div>
-      </SectionWrap>
+      </Section>
 
       {/* 3 CASE */}
-      <SectionWrap>
-        <div className="relative overflow-hidden rounded-3xl border border-brand-soft/30 bg-gradient-case p-6 shadow-brand">
-          <span className="inline-flex rounded-md bg-accent-aqua px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">
-            Кейс · Реабилитация
-          </span>
-          <h2 className="mt-4 text-[28px] font-bold leading-tight tracking-tight text-white">
-            Как центр реабилитации получил
-          </h2>
-          <div className="mt-2 font-display text-4xl font-bold text-accent-aqua">
-            +13 000 000 ₸
-          </div>
-          <p className="mt-1 text-sm text-white/60">
-            дополнительной выручки при том же рекламном бюджете
+      <Section>
+        <div className="text-xs font-semibold uppercase tracking-wider text-brand">Реальный кейс</div>
+        <h2 className="mt-2 text-2xl font-extrabold text-ink tracking-tight">Как центр реабилитации получил +13 000 000 ₸ при том же рекламном бюджете</h2>
+
+        <div className="mt-5 rounded-xl border-l-4 border-l-gold border border-border bg-surface-2/60 p-4 shadow-sm">
+          <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Запрос</div>
+          <p className="mt-1 text-[15px] font-medium text-ink">«Нам нужен SMM, чтобы было больше пациентов.»</p>
+          <p className="mt-3 text-[14px] text-ink-muted leading-relaxed">
+            После диагностики стало понятно, что SMM тут не поможет.
           </p>
+        </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-5">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-soft">Запрос</p>
-              <p className="mt-1 text-[14px] leading-snug text-slate-200">
-                «Нам нужен SMM, чтобы было больше пациентов.» После диагностики стало понятно, что SMM тут не поможет.
-              </p>
-            </div>
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-soft">Что сделали</p>
-              <ul className="mt-2 space-y-2 text-[14px] text-slate-200">
-                {[
-                  "Упаковали услуги",
-                  "Собрали пакеты лечения",
-                  "Настроили аналитику",
-                  "Подготовили сценарии для видео",
-                  "Запустили рекламу",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-2"><Check /><span>{t}</span></li>
-                ))}
-              </ul>
-            </div>
+        <div className="mt-6">
+          <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
+            Что сделали после разбора
           </div>
+          <ul className="mt-3 space-y-3 text-[15px] text-ink">
+            {[
+              "Упаковали услуги",
+              "Собрали пакеты лечения",
+              "Настроили аналитику",
+              "Подготовили сценарии для видео",
+              "Запустили рекламу",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-3 transition-transform duration-200 hover:translate-x-1"><Check /> <span>{t}</span></li>
+            ))}
+          </ul>
+        </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-2 rounded-2xl bg-brand-deep/60 p-1">
+        <div className="mt-6 rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg">
+          <div className="text-xs font-semibold uppercase tracking-wider text-brand">Результат</div>
+          <dl className="mt-4 grid grid-cols-2 gap-3">
             {[
               { label: "Заявок", value: "415" },
-              { label: "Диагностик", value: "107" },
+              { label: "Оплаченных диагностик", value: "107" },
               { label: "Новых пациентов", value: "29" },
-              { label: "Средний чек", value: "350k ₸" },
+              { label: "Средний чек", value: "350 000 ₸" },
             ].map((item) => (
-              <div key={item.label} className="rounded-xl border border-white/5 bg-brand p-4 text-center">
-                <p className="text-[10px] uppercase tracking-wider text-white/40">{item.label}</p>
-                <p className="mt-1 font-display text-xl font-bold tracking-tight text-white tabular-nums">
-                  {item.value}
-                </p>
+              <div key={item.label} className="rounded-xl border border-border/60 bg-surface-2/30 p-3 shadow-sm hover:border-brand/10 hover:bg-surface-2/50 transition-all duration-200">
+                <dt className="text-[10px] font-bold text-ink-muted uppercase tracking-wider">{item.label}</dt>
+                <dd className="mt-0.5 text-2xl font-black text-ink tracking-tight">{item.value}</dd>
               </div>
             ))}
+          </dl>
+          <div className="mt-5 rounded-xl bg-brand p-4 text-brand-foreground shadow-brand transition-all duration-300 hover:scale-[1.01]">
+            <div className="text-xs font-bold uppercase tracking-wider text-gold">
+              Дополнительная выручка
+            </div>
+            <div className="mt-1 text-3xl font-black tracking-tight text-brand-foreground">+13 000 000 ₸</div>
           </div>
         </div>
-      </SectionWrap>
+      </Section>
 
       {/* 4 MANIFESTO */}
-      <section className="bg-accent-aqua px-6 py-20 text-brand">
-        <div className="mx-auto max-w-[520px] space-y-10 text-center">
+      <Section className="relative overflow-hidden bg-brand text-brand-foreground">
+        <div className="pattern-dots absolute inset-0 -z-10 text-brand-foreground opacity-30" aria-hidden="true" />
+        <h2 className="text-2xl font-extrabold leading-tight tracking-tight">
+          Именно поэтому мы создали тестовую неделю
+        </h2>
+        <div className="mt-5 space-y-3.5 text-[15px] leading-relaxed">
           {[
-            { n: "01. Не сразу продаём договор", d: "Не предлагаем сразу договор на год." },
-            { n: "02. Сначала — доказательства", d: "Показываем, как работает наша система именно на вашей клинике." },
-            { n: "03. Решение за вами", d: "После недели вы сами принимаете решение продолжать работу или нет." },
-          ].map((m) => (
-            <div key={m.n} className="space-y-3">
-              <h3 className="font-display text-[26px] font-bold leading-tight tracking-tight">{m.n}</h3>
-              <p className="px-2 text-sm font-medium opacity-80">{m.d}</p>
+            "Не предлагаем сразу договор на год",
+            "Сначала показываем, как работает наша система именно на вашей клинике.",
+            "После недели вы сами принимаете решение продолжать работу или нет.",
+          ].map((text, idx) => (
+            <div key={idx} className="flex gap-3 items-start bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10 transition-all duration-200 hover:bg-white/15">
+              <span className="text-gold text-lg shrink-0 leading-none">✦</span>
+              <p className="text-brand-foreground/95">{text}</p>
             </div>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* 5 EXPERT */}
-      <section className="bg-white px-6 py-16 text-brand">
-        <div className="mx-auto max-w-[520px]">
-          <div className="mb-8 aspect-[4/5] w-full overflow-hidden rounded-3xl">
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Кто проводит тестовую неделю</h2>
+        <div className="mt-5 overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all duration-300 hover:shadow-lg">
+          <div className="relative overflow-hidden aspect-square w-full group">
             <img
               src="/yuri.jpg"
               alt="Юрий Валерьевич — эксперт по маркетингу медицинских клиник"
               width={768}
-              height={960}
+              height={768}
               loading="lazy"
-              className="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
           </div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-soft">
-            Кто проводит тестовую неделю
-          </p>
-          <h2 className="mt-2 font-display text-[30px] font-bold tracking-tight text-brand">
-            Юрий Валерьевич
-          </h2>
-          <p className="mt-1 text-sm font-semibold text-brand-mid">
-            Эксперт по маркетингу медицинских клиник
-          </p>
-
-          <ul className="mt-6 space-y-3 border-t border-slate-200 pt-6 text-[14.5px] text-brand-mid">
-            {[
-              "Более 5 лет в медицинском маркетинге",
-              "Более 50 клиник работают по нашей системе",
-              "Коммерческий директор медицинского центра",
-              "Отвечаю за увеличение количества платных пациентов",
-              "Работаю только с медицинскими клиниками и частными врачами",
-            ].map((t) => (
-              <li key={t} className="flex items-start gap-3">
-                <Check variant="navy" /><span>{t}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="p-6">
+            <div className="text-xl font-extrabold text-ink">Юрий Валерьевич</div>
+            <p className="mt-1 text-[14px] font-medium text-brand">
+              Эксперт по маркетингу медицинских клиник
+            </p>
+            <ul className="mt-5 space-y-3 text-[15px] text-ink border-t border-border/60 pt-5">
+              {[
+                "Более 5 лет в медицинском маркетинге",
+                "Более 50 клиник работают по нашей системе",
+                "Коммерческий директор медицинского центра",
+                "Отвечаю за увеличение количества платных пациентов",
+                "Работаю только с медицинскими клиниками и частными врачами",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"><Check /> <span>{t}</span></li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </section>
+      </Section>
 
-      {/* 6 DAYS TIMELINE */}
-      <SectionWrap>
-        <h2 className="text-[26px] font-bold tracking-tight text-white">
-          Что входит в тестовую неделю
-        </h2>
-        <p className="mt-2 text-[14px] text-ink-muted">7 дней глубокой работы с вашей клиникой</p>
-
-        <ol className="relative mt-10 space-y-9">
-          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/10" />
-          {days.map((d, i) => (
-            <li key={d.n} className="relative pl-9">
-              <div
-                className={
-                  "absolute left-0 top-0.5 h-[15px] w-[15px] rounded-full " +
-                  (i === 0
-                    ? "bg-accent-aqua shadow-[0_0_15px_rgba(92,189,185,0.6)]"
-                    : "border-2 border-brand bg-brand-mid")
-                }
-                aria-hidden="true"
-              />
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-aqua">
+      {/* 6 DAYS */}
+      <Section>
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что входит в тестовую неделю</h2>
+        <ol className="mt-8 space-y-6 border-l-2 border-brand/20 pl-6 ml-2">
+          {days.map((d) => (
+            <li key={d.n} className="relative pl-1 group">
+              <span className="absolute -left-[35px] top-0.5 grid h-6 w-6 place-items-center rounded-full bg-brand text-[11px] font-extrabold text-brand-foreground shadow-brand ring-4 ring-background transition-transform duration-300 group-hover:scale-110">
+                {d.n}
+              </span>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-brand leading-none">
                 День {d.n}
-              </p>
-              <h3 className="mt-1 text-[16px] font-bold leading-tight text-white">{d.t}</h3>
-              <p className="mt-1 text-[13.5px] leading-relaxed text-ink-muted">{d.d}</p>
+              </div>
+              <div className="mt-1 text-[17px] font-bold text-ink leading-tight group-hover:text-brand transition-colors duration-200">{d.t}</div>
+              <p className="mt-1.5 text-[14px] leading-relaxed text-ink-muted whitespace-pre-line">{d.d}</p>
             </li>
           ))}
         </ol>
-      </SectionWrap>
+      </Section>
 
-      {/* 7 DELIVERABLES */}
-      <SectionWrap className="bg-surface-2">
-        <h2 className="text-[26px] font-bold tracking-tight text-white">
-          Что вы получите через 7 дней
-        </h2>
-        <div className="mt-8 space-y-4">
-          {outcomes.map((t, i) => (
-            <div key={t} className="flex items-start gap-4">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-accent-aqua/10 font-display text-xs font-bold text-accent-aqua tabular-nums">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <p className="pt-0.5 text-[14.5px] text-slate-200">{t}</p>
-            </div>
+      {/* 7 OUTCOMES */}
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что вы получите через 7 дней</h2>
+        <ul className="mt-6 space-y-3">
+          {[
+            "Полную картину маркетинга клиники",
+            "План роста выручки",
+            "Новые рекламные офферы",
+            "Сценарии рекламы",
+            "План продвижения",
+            "Понимание, куда уходят деньги",
+            "Приоритетные задачи на ближайшие 30 дней",
+          ].map((t) => (
+            <li key={t} className="flex items-center gap-3.5 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
+              <Check /> <span>{t}</span>
+            </li>
           ))}
-        </div>
-      </SectionWrap>
+        </ul>
+      </Section>
 
       {/* 8 FOR WHOM */}
-      <SectionWrap>
-        <h2 className="text-[26px] font-bold tracking-tight text-white">Для кого подходит</h2>
-        <div className="mt-8 grid grid-cols-2 gap-3">
-          {forWhom.map((t) => (
-            <div
-              key={t}
-              className="aspect-[5/3] rounded-2xl border border-white/5 bg-white/5 p-4 transition-all hover:border-accent-aqua/20 hover:bg-white/10"
-            >
-              <div className="mb-2 h-1 w-8 rounded-full bg-accent-aqua" />
-              <p className="text-[13.5px] font-bold leading-tight text-white">{t}</p>
-            </div>
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Для кого подходит</h2>
+        <ul className="mt-5 grid grid-cols-2 gap-3">
+          {[
+            "Стоматологии",
+            "Косметологии",
+            "Реабилитационные центры",
+            "Многопрофильные клиники",
+            "Медицинские центры",
+            "Частные врачи",
+          ].map((t) => (
+            <li key={t} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-3.5 text-[14px] font-bold text-ink hover:border-brand/20 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
+              <span className="text-brand font-extrabold text-lg leading-none shrink-0">•</span>
+              <span>{t}</span>
+            </li>
           ))}
-        </div>
-      </SectionWrap>
+        </ul>
+      </Section>
 
       {/* 9 PRICE */}
-      <SectionWrap>
-        <div className="relative overflow-hidden rounded-3xl bg-white p-8 text-center text-brand shadow-card">
-          <div className="pointer-events-none absolute -top-24 -right-24 h-52 w-52 rounded-full bg-accent-aqua/15 blur-3xl" />
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-soft">
-            Стоимость
-          </p>
-          <div className="mt-3 font-display text-5xl font-bold tracking-tight text-brand">
-            50 000 ₸
-          </div>
-          <p className="mt-3 text-sm text-brand/60">Тестовая неделя маркетинга клиники</p>
-
-          <p className="mt-6 text-[14px] leading-relaxed text-brand-mid">
-            В течение недели полностью погружаемся в работу вашей клиники и готовим систему роста.
-          </p>
-
-          <div className="mt-5 flex items-start gap-3 rounded-xl border border-accent-aqua/30 bg-accent-aqua/10 p-4 text-left text-[13.5px] leading-relaxed text-brand">
-            <span className="text-lg leading-none" aria-hidden>💡</span>
-            <p>
-              Если после тестовой недели вы решите продолжить сотрудничество — стоимость недели засчитывается в оплату основного проекта.
+      <Section>
+        <div className="relative rounded-3xl bg-card p-[1px] shadow-card group transition-all duration-300 hover:shadow-lg">
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand/20 via-gold/15 to-brand/5 group-hover:from-brand/35 group-hover:via-gold/25 group-hover:to-brand/10 transition-all duration-300" aria-hidden="true" />
+          <div className="relative rounded-3xl bg-card p-6">
+            <div className="text-xs font-bold uppercase tracking-wider text-brand">Стоимость</div>
+            <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя маркетинга</h2>
+            <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
+            <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
+              В течение недели полностью погружаемся в работу вашей клиники и готовим систему роста.
             </p>
-          </div>
-
-          <div className="mt-6">
-            <WaCta className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-[15px] font-bold text-white transition-transform active:scale-[0.98]">
-              Записаться на тестовую неделю
-            </WaCta>
+            <div className="mt-4 rounded-xl border border-brand/20 bg-brand-soft/60 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
+              <span className="text-brand text-lg shrink-0" aria-hidden>💡</span>
+              <p>Если после тестовой недели вы решите продолжить сотрудничество стоимость недели засчитывается в оплату основного проекта.</p>
+            </div>
+            <div className="mt-6">
+              <WaCta>Записаться на тестовую неделю</WaCta>
+            </div>
           </div>
         </div>
-      </SectionWrap>
+      </Section>
 
       {/* 10 FAQ */}
-      <SectionWrap className="bg-surface-2">
-        <h2 className="text-[26px] font-bold tracking-tight text-white">Частые вопросы</h2>
-        <Accordion type="single" collapsible className="mt-6 space-y-0">
-          {[
-            {
-              q: "За 7 дней будут пациенты?",
-              a: "Главная цель недели — провести глубокую подготовку, внедрить ключевые изменения и дать клинике готовую систему для роста. В зависимости от этапа работ и готовности клиники первые обращения могут появиться уже в процессе.",
-            },
-            {
-              q: "Это аудит?",
-              a: "Нет. Мы не ограничиваемся рекомендациями — вместе с вами начинаем внедрение.",
-            },
-            {
-              q: "Вы работаете по всему Казахстану?",
-              a: "Да. Работаем онлайн с клиниками и частными врачами по всему Казахстану.",
-            },
-          ].map((item, i) => (
-            <AccordionItem
-              key={i}
-              value={`q${i}`}
-              className="border-b border-white/10"
-            >
-              <AccordionTrigger className="py-5 text-left text-[15px] font-bold text-white hover:no-underline hover:text-accent-aqua transition-colors [&[data-state=open]]:text-accent-aqua">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="pb-5 text-[14px] leading-relaxed text-ink-muted">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Частые вопросы</h2>
+        <Accordion type="single" collapsible className="mt-5 space-y-3">
+          <AccordionItem value="q1" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
+            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
+              За 7 дней будут пациенты?
+            </AccordionTrigger>
+            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
+              Главная цель недели — провести глубокую подготовку, внедрить ключевые изменения и дать клинике готовую систему для роста. В зависимости от этапа работ и готовности клиники первые обращения могут появиться уже в процессе.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="q2" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
+            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
+              Это аудит?
+            </AccordionTrigger>
+            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
+              Нет. Мы не ограничиваемся рекомендациями — вместе с вами начинаем внедрение.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="q3" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
+            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
+              Вы работаете по всему Казахстану?
+            </AccordionTrigger>
+            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
+              Да. Работаем онлайн с клиниками и частными врачами по всему Казахстану.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
-      </SectionWrap>
+      </Section>
 
       {/* 11 FINAL CTA */}
-      <section className="relative overflow-hidden px-6 pt-20 pb-16">
-        <div className="pattern-dots absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-[520px] text-center">
-          <h2 className="font-display text-[30px] font-bold leading-[1.1] tracking-tight text-white">
+      <Section>
+        <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
+          <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
+          <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
             Готовы проверить, сможет ли ваша клиника получать больше платных пациентов?
           </h2>
-          <p className="mt-5 text-[14.5px] leading-relaxed text-ink-muted">
+          <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
             За 7 дней покажем, где клиника теряет деньги, подготовим маркетинговую систему и составим план дальнейшего роста.
           </p>
-          <p className="mt-5 text-[13px] text-ink-muted">
-            Оставьте заявку — свяжемся с вами и согласуем старт тестовой недели.
-          </p>
-          <div className="mt-8">
-            <WaCta className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-accent-aqua px-6 py-5 text-[15px] font-bold text-brand shadow-aqua transition-transform active:scale-[0.98]">
-              Забронировать тестовую неделю
-            </WaCta>
+          <div className="mt-5 flex items-baseline gap-2">
+            <span className="text-3xl font-extrabold text-brand tracking-tight"></span>
+            <span className="text-sm text-ink-muted"></span>
           </div>
-          <div className="mt-6 flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 text-left text-[13px] leading-relaxed text-ink-muted">
-            <span className="shrink-0 text-lg leading-none" aria-hidden>🛡</span>
-            <span>
+          <p className="mt-4 text-[14px] text-ink-muted">
+            Оставьте заявку свяжемся с вами и согласуем старт тестовой недели.
+          </p>
+          <div className="mt-5">
+            <WaCta>Записаться на тестовую неделю</WaCta>
+          </div>
+          <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
+            <span className="text-lg shrink-0" aria-hidden>🛡</span>
+            <span className="text-ink-muted">
               Если по итогам недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста для вашей клиники — вернём деньги.
             </span>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <footer className="border-t border-white/5 px-6 py-6 text-center text-[11px] uppercase tracking-[0.2em] text-ink-muted">
-        Юрий Валерьевич · Маркетинг для медицинских клиник
+      <footer className="px-5 pb-6 pt-4 text-center text-[12px] text-ink-muted border-t border-border/40 mt-8 max-w-[520px] mx-auto">
+        Юрий Валерьевич · Маркетинг для медицинских клиник ·
       </footer>
     </main>
   );
 }
+
