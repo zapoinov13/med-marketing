@@ -121,11 +121,11 @@ function LandingPage() {
 
         <div className="mt-6 rounded-3xl border border-brand/15 bg-card p-6 shadow-card transition-all duration-300 hover:shadow-lg ring-1 ring-brand/5">
           <div className="text-xs font-bold uppercase tracking-wider text-ink-muted">
-            Тестовая неделя маркетинга
+            
           </div>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-4xl font-extrabold text-ink tracking-tight">50 000 ₸</span>
-            <span className="text-sm text-ink-muted">стоимость участия</span>
+            <span className="text-4xl font-extrabold text-ink tracking-tight"></span>
+            <span className="text-sm text-ink-muted"></span>
           </div>
           <ul className="mt-5 space-y-3.5 text-[15px] text-ink">
             <li className="flex items-start gap-3"><Check /> <span>Работаем с вашей клиникой 7 дней</span></li>
