@@ -98,7 +98,8 @@ function LandingPage() {
           Маркетинг для медицинских клиник
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
-          Как клиника получила <span className="text-brand font-black block mt-2">+13 000 000 ₸</span> дополнительной выручки при том же рекламном бюджете?
+          Тестовая неделя маркетинга для медицинской клиники
+          <span className="text-brand font-black block mt-2">всего за&nbsp; 50 000 ₸</span>
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
           Вместо того чтобы сразу продавать рекламу, мы за 7 дней разбираем вашу клинику, находим слабые места и запускаем систему привлечения платных пациентов.
