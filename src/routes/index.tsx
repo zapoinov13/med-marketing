@@ -114,7 +114,7 @@ function LandingPage() {
           />
           <div>
             <div className="text-sm font-extrabold text-ink leading-tight">Юрий Валерьевич</div>
-            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу medical клиник · 6+ лет</div>
+            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу клиник · 5+ лет</div>
           </div>
         </div>
 
