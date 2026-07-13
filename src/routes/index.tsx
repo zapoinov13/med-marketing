@@ -277,7 +277,7 @@ function LandingPage() {
 
       {/* 6 DAYS */}
       <Section>
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что входит в мою работу</h2>
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что входит в тестовую неделю</h2>
         <ol className="mt-8 space-y-6 border-l-2 border-brand/20 pl-6 ml-2">
           {days.map((d) => (
             <li key={d.n} className="relative pl-1 group">
