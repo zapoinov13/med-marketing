@@ -23,7 +23,15 @@ export function WaCta({ children, className, ariaLabel }: Props) {
         } catch {
           /* noop */
         }
+        try {
+          (window as unknown as { dataLayer?: Array<Record<string, unknown>> }).dataLayer?.push({
+            event: "whatsapp_click",
+          });
+        } catch {
+          /* noop */
+        }
       }}
+
       className={
         className ??
         "inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-4 text-base font-semibold text-brand-foreground shadow-brand transition-transform active:scale-[0.98]"
