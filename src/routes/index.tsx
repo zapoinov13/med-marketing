@@ -120,22 +120,28 @@ function LandingPage() {
         </div>
 
         <div className="mt-6 rounded-3xl border border-brand/15 bg-card p-6 shadow-card transition-all duration-300 hover:shadow-lg ring-1 ring-brand/5">
-          <div className="text-xs font-bold uppercase tracking-wider text-ink-muted">
-            
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-gold/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Бесплатно · 20 минут
           </div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-4xl font-extrabold text-ink tracking-tight"></span>
-            <span className="text-sm text-ink-muted"></span>
+          <div className="mt-2 text-xl font-extrabold text-ink leading-tight tracking-tight">
+            Разбор маркетинга вашей клиники
           </div>
-          <ul className="mt-5 space-y-3.5 text-[15px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Работаем с вашей клиникой 7 дней</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Не просто аудит, а реальные внедрения</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>В конце недели результаты и план что делать дальше</span></li>
+          <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
+            За 20 минут в WhatsApp покажу, где клиника теряет пациентов и что можно исправить в первую очередь.
+          </p>
+          <ul className="mt-4 space-y-3 text-[15px] text-ink">
+            <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы и посадочных</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>3 точки роста конкретно для вашей клиники</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Без обязательств и продаж по скрипту</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Записаться на тестовую неделю</WaCta>
+            <WaCta>Получить бесплатный разбор</WaCta>
           </div>
+          <p className="mt-3 text-center text-[12px] text-ink-muted">
+            Тестовая неделя за 50 000 ₸ — по желанию, после разбора
+          </p>
         </div>
+
       </Section>
 
       {/* 2 PROBLEM */}
