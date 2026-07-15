@@ -401,20 +401,18 @@ function LandingPage() {
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
           <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Готовы проверить, сможет ли ваша клиника получать больше платных пациентов?
+            Начнём с бесплатного разбора вашей клиники
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-            За 7 дней покажем, где клиника теряет деньги, подготовим маркетинговую систему и составим план дальнейшего роста.
+            За 20 минут в WhatsApp покажу 3 точки, где ваша клиника теряет пациентов, и что можно исправить. Без обязательств.
           </p>
-          <div className="mt-5 flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-brand tracking-tight"></span>
-            <span className="text-sm text-ink-muted"></span>
-          </div>
-          <p className="mt-4 text-[14px] text-ink-muted">
-            Оставьте заявку свяжемся с вами и согласуем старт тестовой недели.
-          </p>
-          <div className="mt-5">
-            <WaCta>Записаться на тестовую неделю</WaCta>
+          <ul className="mt-5 space-y-2.5 text-[14px] text-ink">
+            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашей клинике, не общие советы</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Отвечу лично — не менеджер отдела продаж</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
+          </ul>
+          <div className="mt-6">
+            <WaCta>Получить бесплатный разбор</WaCta>
           </div>
           <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
             <span className="text-lg shrink-0" aria-hidden>🛡</span>
