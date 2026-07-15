@@ -1,19 +1,22 @@
 import type { ReactNode } from "react";
 
-const WA_URL =
-  "https://wa.me/77472842595?text=" +
-  encodeURIComponent("Добрый день, хочу записаться на тестовую неделю");
+const DEFAULT_MESSAGE =
+  "Здравствуйте! Хочу получить бесплатный разбор клиники. Клиника: [город, направление].";
 
 type Props = {
   children: ReactNode;
   className?: string;
   ariaLabel?: string;
+  message?: string;
 };
 
-export function WaCta({ children, className, ariaLabel }: Props) {
+export function WaCta({ children, className, ariaLabel, message }: Props) {
+  const href =
+    "https://wa.me/77472842595?text=" +
+    encodeURIComponent(message ?? DEFAULT_MESSAGE);
   return (
     <a
-      href={WA_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel ?? "Записаться на тестовую неделю в WhatsApp"}

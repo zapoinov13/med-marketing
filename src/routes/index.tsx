@@ -120,22 +120,28 @@ function LandingPage() {
         </div>
 
         <div className="mt-6 rounded-3xl border border-brand/15 bg-card p-6 shadow-card transition-all duration-300 hover:shadow-lg ring-1 ring-brand/5">
-          <div className="text-xs font-bold uppercase tracking-wider text-ink-muted">
-            
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-gold/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Бесплатно · 20 минут
           </div>
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-4xl font-extrabold text-ink tracking-tight"></span>
-            <span className="text-sm text-ink-muted"></span>
+          <div className="mt-2 text-xl font-extrabold text-ink leading-tight tracking-tight">
+            Разбор маркетинга вашей клиники
           </div>
-          <ul className="mt-5 space-y-3.5 text-[15px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Работаем с вашей клиникой 7 дней</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Не просто аудит, а реальные внедрения</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>В конце недели результаты и план что делать дальше</span></li>
+          <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
+            За 20 минут в WhatsApp покажу, где клиника теряет пациентов и что можно исправить в первую очередь.
+          </p>
+          <ul className="mt-4 space-y-3 text-[15px] text-ink">
+            <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы и посадочных</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>3 точки роста конкретно для вашей клиники</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Без обязательств и продаж по скрипту</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Записаться на тестовую неделю</WaCta>
+            <WaCta>Получить бесплатный разбор</WaCta>
           </div>
+          <p className="mt-3 text-center text-[12px] text-ink-muted">
+            Тестовая неделя за 50 000 ₸ — по желанию, после разбора
+          </p>
         </div>
+
       </Section>
 
       {/* 2 PROBLEM */}
@@ -350,8 +356,11 @@ function LandingPage() {
               <p>Если после тестовой недели вы решите продолжить сотрудничество стоимость недели засчитывается в оплату основного проекта.</p>
             </div>
             <div className="mt-6">
-              <WaCta>Записаться на тестовую неделю</WaCta>
+              <WaCta message="Здравствуйте! Хочу записаться на тестовую неделю за 50 000 ₸. Клиника: [город, направление].">Записаться на тестовую неделю</WaCta>
             </div>
+            <p className="mt-3 text-center text-[12px] text-ink-muted">
+              Не готовы сразу? <span className="font-semibold text-ink">Начните с бесплатного разбора</span> — кнопка вверху страницы
+            </p>
           </div>
         </div>
       </Section>
@@ -392,20 +401,18 @@ function LandingPage() {
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
           <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Готовы проверить, сможет ли ваша клиника получать больше платных пациентов?
+            Начнём с бесплатного разбора вашей клиники
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-            За 7 дней покажем, где клиника теряет деньги, подготовим маркетинговую систему и составим план дальнейшего роста.
+            За 20 минут в WhatsApp покажу 3 точки, где ваша клиника теряет пациентов, и что можно исправить. Без обязательств.
           </p>
-          <div className="mt-5 flex items-baseline gap-2">
-            <span className="text-3xl font-extrabold text-brand tracking-tight"></span>
-            <span className="text-sm text-ink-muted"></span>
-          </div>
-          <p className="mt-4 text-[14px] text-ink-muted">
-            Оставьте заявку свяжемся с вами и согласуем старт тестовой недели.
-          </p>
-          <div className="mt-5">
-            <WaCta>Записаться на тестовую неделю</WaCta>
+          <ul className="mt-5 space-y-2.5 text-[14px] text-ink">
+            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашей клинике, не общие советы</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Отвечу лично — не менеджер отдела продаж</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
+          </ul>
+          <div className="mt-6">
+            <WaCta>Получить бесплатный разбор</WaCta>
           </div>
           <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
             <span className="text-lg shrink-0" aria-hidden>🛡</span>
