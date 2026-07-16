@@ -135,7 +135,7 @@ function LandingPage() {
             <li className="flex items-start gap-3"><Check /> <span>Без обязательств и продаж по скрипту</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Получить бесплатный разбор</WaCta>
+            <LeadCta source="hero">Получить бесплатный разбор</LeadCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             Тестовая неделя за 50 000 ₸ — по желанию, после разбора
