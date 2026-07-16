@@ -412,7 +412,7 @@ function LandingPage() {
             <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Получить бесплатный разбор</WaCta>
+            <LeadCta source="final_cta">Получить бесплатный разбор</LeadCta>
           </div>
           <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
             <span className="text-lg shrink-0" aria-hidden>🛡</span>
