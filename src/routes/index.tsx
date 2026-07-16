@@ -98,7 +98,7 @@ function LandingPage() {
           Маркетинг для медицинских клиник
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
-          Тестовая неделя маркетинга для медицинской клиники
+          Неделя маркетинга для медицинской клиники
           <span className="text-brand font-black block mt-2">всего за&nbsp; 50 000 ₸</span>
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
