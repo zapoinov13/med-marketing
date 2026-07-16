@@ -27,14 +27,14 @@ function escapeHtml(input: string): string {
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => InputSchema.parse(data))
   .handler(async ({ data }) => {
-    const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
-    const TELEGRAM_API_KEY = process.env.TELEGRAM_API_KEY;
+    // Отправляем заявку напрямую в Telegram Bot API (без шлюза Lovable).
+    // TELEGRAM_API_KEY — это токен бота от @BotFather (вида 123456789:ABC-DEF...).
+    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_API_KEY;
     const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-    if (!LOVABLE_API_KEY || !TELEGRAM_API_KEY || !TELEGRAM_CHAT_ID) {
+    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
       console.error("Telegram env missing", {
-        hasLovable: !!LOVABLE_API_KEY,
-        hasTelegram: !!TELEGRAM_API_KEY,
+        hasToken: !!TELEGRAM_BOT_TOKEN,
         hasChat: !!TELEGRAM_CHAT_ID,
       });
       throw new Error("Server is not configured");
@@ -70,12 +70,10 @@ export const submitLead = createServerFn({ method: "POST" })
     const text = lines.join("\n");
 
     const response = await fetch(
-      "https://connector-gateway.lovable.dev/telegram/sendMessage",
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
-          "X-Connection-Api-Key": TELEGRAM_API_KEY,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
