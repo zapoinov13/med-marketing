@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "med-marketing-mcp",
+      "version": "0.1.0",
+      "title": "Маркетинг для клиник — MCP"
+    },
+    "tools": [
+      {
+        "name": "get_offer",
+        "title": "Получить оффер тестовой недели",
+        "description": "Возвращает детали оффера «Тестовая неделя маркетинга для медицинских клиник»: цену, длительность, что входит и итоговый результат.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_case_study",
+        "title": "Кейс: Центр реабилитации",
+        "description": "Возвращает результаты реального кейса маркетинга для медицинского центра реабилитации: заявки, диагностики, пациенты и итоговая выручка.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_expert",
+        "title": "Об эксперте",
+        "description": "Возвращает информацию о Юрии Валерьевиче — эксперте, который проводит тестовую неделю маркетинга для клиник.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_contact",
+        "title": "Контакты для записи",
+        "description": "Возвращает способы связаться и записаться на бесплатный разбор клиники или тестовую неделю маркетинга: WhatsApp, телефон, ссылка на сайт.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
