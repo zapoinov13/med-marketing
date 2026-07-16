@@ -401,7 +401,7 @@ function LandingPage() {
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
           <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Начнём с бесплатного разбора вашей клиники
+            Начнём с разбора вашей клиники
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
             За 20 минут в WhatsApp покажу 3 точки, где ваша клиника теряет пациентов, и что можно исправить. Без обязательств.
