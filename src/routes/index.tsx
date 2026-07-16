@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { WaCta } from "@/components/wa-cta";
+import { LeadCta } from "@/components/lead-cta";
 import {
   Accordion,
   AccordionContent,
@@ -135,7 +135,7 @@ function LandingPage() {
             <li className="flex items-start gap-3"><Check /> <span>Без обязательств и продаж по скрипту</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Получить бесплатный разбор</WaCta>
+            <LeadCta source="hero">Получить бесплатный разбор</LeadCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             Тестовая неделя за 50 000 ₸ — по желанию, после разбора
@@ -356,7 +356,7 @@ function LandingPage() {
               <p>Если после тестовой недели вы решите продолжить сотрудничество стоимость недели засчитывается в оплату основного проекта.</p>
             </div>
             <div className="mt-6">
-              <WaCta message="Здравствуйте! Хочу записаться на тестовую неделю за 50 000 ₸. Клиника: [город, направление].">Записаться на тестовую неделю</WaCta>
+              <LeadCta source="price_block">Записаться на тестовую неделю</LeadCta>
             </div>
             <p className="mt-3 text-center text-[12px] text-ink-muted">
               Не готовы сразу? <span className="font-semibold text-ink">Начните с бесплатного разбора</span> — кнопка вверху страницы
@@ -412,7 +412,7 @@ function LandingPage() {
             <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
           </ul>
           <div className="mt-6">
-            <WaCta>Получить бесплатный разбор</WaCta>
+            <LeadCta source="final_cta">Получить бесплатный разбор</LeadCta>
           </div>
           <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
             <span className="text-lg shrink-0" aria-hidden>🛡</span>
