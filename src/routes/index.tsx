@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { WaCta } from "@/components/wa-cta";
+import { LeadCta } from "@/components/lead-cta";
 import {
   Accordion,
   AccordionContent,
