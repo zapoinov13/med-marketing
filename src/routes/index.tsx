@@ -18,7 +18,10 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: "/yuri.jpg", fetchpriority: "high" } as unknown as { rel: string; href: string },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -111,6 +114,9 @@ function LandingPage() {
             alt="Юрий Валерьевич"
             width={48}
             height={48}
+            loading="eager"
+            decoding="async"
+            {...({ fetchpriority: "high" } as { fetchpriority: "high" })}
             className="h-12 w-12 rounded-full object-cover ring-2 ring-brand/15 shadow-sm"
           />
           <div>
