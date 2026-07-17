@@ -29,9 +29,27 @@ function primaryButtonClass() {
   return "inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-4 text-base font-semibold text-brand-foreground shadow-brand transition-transform active:scale-[0.98]";
 }
 
-function trackLead() {
+function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const match = document.cookie.match(
+    new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\/+^])/g, "\\$1") + "=([^;]*)"),
+  );
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+/** Reads the Meta click id cookie, or rebuilds it from a ?fbclid= URL param. */
+function getFbc(): string | undefined {
+  const cookie = getCookie("_fbc");
+  if (cookie) return cookie;
+  if (typeof window === "undefined") return undefined;
+  const fbclid = new URLSearchParams(window.location.search).get("fbclid");
+  return fbclid ? `fb.1.${Date.now()}.${fbclid}` : undefined;
+}
+
+function trackLead(eventId: string) {
   try {
-    window.fbq?.("track", "Lead");
+    // eventID lets Meta deduplicate this browser event against the CAPI event.
+    window.fbq?.("track", "Lead", {}, { eventID: eventId });
   } catch {
     /* noop */
   }
@@ -51,6 +69,20 @@ function trackLead() {
   } catch {
     /* noop */
   }
+}
+
+function formatKzPhone(raw: string): string {
+  let d = raw.replace(/\D+/g, "");
+  // Strip a leading country code (7/8) only when the full 11-digit form was entered/pasted.
+  if (d.length === 11 && (d[0] === "7" || d[0] === "8")) d = d.slice(1);
+  d = d.slice(0, 10);
+  if (d.length === 0) return "";
+  let out = "+7 (" + d.slice(0, 3);
+  if (d.length >= 3) out += ")";
+  if (d.length > 3) out += " " + d.slice(3, 6);
+  if (d.length > 6) out += " " + d.slice(6, 8);
+  if (d.length > 8) out += " " + d.slice(8, 10);
+  return out;
 }
 
 export function LeadCta({ children, className, ariaLabel, source }: Props) {
@@ -73,8 +105,9 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
       return;
     }
     const digits = trimmedPhone.replace(/\D+/g, "");
-    if (digits.length < 10) {
-      setErrorMsg("Введите корректный номер телефона");
+    const national = digits.length === 11 ? digits.slice(1) : digits;
+    if (national.length < 10) {
+      setErrorMsg("Введите номер полностью");
       return;
     }
     setStatus("submitting");
@@ -86,8 +119,26 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
               .join(" | ")
           : "";
       const pageUrl = typeof window !== "undefined" ? window.location.href : "";
-      await submit({ data: { name: trimmedName, phone: trimmedPhone, utm, pageUrl } });
-      trackLead();
+      const eventId =
+        typeof crypto !== "undefined" && "randomUUID" in crypto
+          ? crypto.randomUUID()
+          : `lead-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      const fbp = getCookie("_fbp");
+      const fbc = getFbc();
+      const userAgent = typeof navigator !== "undefined" ? navigator.userAgent : undefined;
+      await submit({
+        data: {
+          name: trimmedName,
+          phone: trimmedPhone,
+          utm,
+          pageUrl,
+          eventId,
+          fbp,
+          fbc,
+          userAgent,
+        },
+      });
+      trackLead(eventId);
       setStatus("success");
     } catch (err) {
       console.error(err);
@@ -199,8 +250,8 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
                   autoComplete="tel"
                   placeholder="+7 (___) ___-__-__"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  maxLength={30}
+                  onChange={(e) => setPhone(formatKzPhone(e.target.value))}
+                  maxLength={18}
                   required
                   className="h-12 text-base"
                 />
