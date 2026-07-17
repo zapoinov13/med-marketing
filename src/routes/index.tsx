@@ -127,7 +127,7 @@ function LandingPage() {
             Разбор маркетинга вашей клиники
           </div>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
-            За 20 минут в WhatsApp покажу, где клиника теряет пациентов и что можно исправить в первую очередь.
+            покажу, где клиника теряет пациентов и что можно исправить в первую очередь.
           </p>
           <ul className="mt-4 space-y-3 text-[15px] text-ink">
             <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы и посадочных</span></li>
