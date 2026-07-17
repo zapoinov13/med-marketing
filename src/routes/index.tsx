@@ -299,7 +299,7 @@ function LandingPage() {
               width={768}
               height={768}
               loading="lazy"
-              className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-[center_70%] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
           </div>
