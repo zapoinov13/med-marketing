@@ -269,8 +269,8 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
                 {status === "submitting" ? "Отправляем…" : "Отправить заявку"}
               </button>
 
-              <p className="text-center text-[12px] text-ink-muted leading-relaxed">
-                Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+              <p className="text-center text-[11px] text-ink-muted leading-relaxed">
+                Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Номер нужен только для связи — никакого спама.
               </p>
             </form>
           </div>
