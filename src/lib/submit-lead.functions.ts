@@ -123,7 +123,7 @@ export const submitLead = createServerFn({ method: "POST" })
     const waDigits = formatPhoneForWa(data.phone);
     const waUrl = waDigits
       ? `https://wa.me/${waDigits}?text=${encodeURIComponent(
-          `Здравствуйте, ${data.name}! Вы оставили заявку на разбор клиники.`,
+          `Здравствуйте, ${data.name}! Вы оставили заявку на разбор бизнеса.`,
         )}`
       : "";
 

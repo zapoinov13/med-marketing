@@ -2,14 +2,14 @@ import { defineTool } from "@lovable.dev/mcp-js";
 
 export default defineTool({
   name: "get_case_study",
-  title: "Кейс: Центр реабилитации",
+  title: "Кейс: сервисный бизнес",
   description:
-    "Возвращает результаты реального кейса маркетинга для медицинского центра реабилитации: заявки, диагностики, пациенты и итоговая выручка.",
+    "Возвращает результаты реального кейса маркетинга для сервисного бизнеса: заявки, консультации, клиенты и итоговая выручка.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const caseStudy = {
-      client: "Центр реабилитации",
+      client: "Сервисный бизнес",
       period_months: 3,
       actions: [
         "Переупаковка оффера и сайта",
