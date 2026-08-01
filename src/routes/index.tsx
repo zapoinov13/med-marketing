@@ -28,11 +28,11 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "Тестовая неделя маркетинга для медицинских клиник",
+          name: "Тестовая неделя маркетинга для бизнеса",
           provider: { "@type": "Person", name: "Юрий Валерьевич" },
           areaServed: "KZ",
           description:
-            "7 дней глубокой работы с клиникой: аудит, стратегия, контент, реклама, аналитика, план роста.",
+            "7 дней глубокой работы с бизнесом: аудит, стратегия, контент, реклама, аналитика, план роста.",
           offers: {
             "@type": "Offer",
             price: "50000",
@@ -83,8 +83,8 @@ function Section({
 
 function LandingPage() {
   const days = [
-    { n: 1, t: "Аудит клиники", d: "Проверяем текущую рекламу, объявления, посадочные страницы и точки потерь" },
-    { n: 2, t: "Анализ конкурентов", d: "Показываем, почему пациенты выбирают другие клиники.\n" },
+    { n: 1, t: "Аудит бизнеса", d: "Проверяем текущую рекламу, объявления, посадочные страницы и точки потерь" },
+    { n: 2, t: "Анализ конкурентов", d: "Показываем, почему клиенты выбирают конкурентов.\n" },
     { n: 3, t: "Контент", d: "Пишем сценарии для видео, статичных креативов и каруселей." },
     { n: 4, t: "Подготовка и запуск рекламы", d: "Создаём рекламные кампании\u00a0\nи запускаем рекламу" },
     { n: 5, t: "Аналитика", d: "Настраиваем контроль обращений с рекламы\u00a0" },
@@ -98,14 +98,14 @@ function LandingPage() {
       <Section className="relative overflow-hidden pt-12">
         <div className="bg-gradient-hero absolute inset-0 -z-10" aria-hidden="true" />
         <span className="inline-flex items-center rounded-full bg-brand-soft px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand border border-brand/10">
-          Маркетинг для медицинских клиник
+          Маркетинг для вашего бизнеса
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
-          Неделя маркетинга для медицинской клиники
+          Неделя маркетинга для вашего бизнеса
           <span className="text-brand font-black block mt-2">всего за&nbsp; 50 000 ₸</span>
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          За 7 дней полностью погружаемся в работу вашей клиники, находим точки потери пациентов, запускаем рекламу и показываем, что именно нужно изменить, чтобы получать больше платных пациентов.
+          За 7 дней полностью погружаемся в работу вашего бизнеса, находим точки потери клиентов, запускаем рекламу и показываем, что именно нужно изменить, чтобы получать больше заявок и продаж.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
@@ -121,7 +121,7 @@ function LandingPage() {
           />
           <div>
             <div className="text-sm font-extrabold text-ink leading-tight">Юрий Валерьевич</div>
-            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу клиник · 5+ лет</div>
+            <div className="text-xs text-ink-muted mt-0.5">Эксперт по маркетингу и рекламе · 5+ лет</div>
           </div>
         </div>
 
@@ -130,14 +130,14 @@ function LandingPage() {
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Бесплатно · 20 минут
           </div>
           <div className="mt-2 text-xl font-extrabold text-ink leading-tight tracking-tight">
-            Разбор маркетинга вашей клиники
+            Разбор маркетинга вашего бизнеса
           </div>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
-            покажу, где клиника теряет пациентов и что можно исправить в первую очередь.
+            покажу, где бизнес теряет клиентов и что можно исправить в первую очередь.
           </p>
           <ul className="mt-4 space-y-3 text-[15px] text-ink">
             <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы и посадочных</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>3 точки роста конкретно для вашей клиники</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>3 точки роста конкретно для вашего бизнеса</span></li>
             <li className="flex items-start gap-3"><Check /> <span>Без обязательств и продаж по скрипту</span></li>
           </ul>
           <div className="mt-6">
@@ -156,14 +156,14 @@ function LandingPage() {
           Почему мы предлагаем сначала тестовую неделю?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Потому что большинство клиник думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
+          Потому что большинство компаний думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
         </p>
         <ul className="mt-6 space-y-3">
           {[
             "Неправильное предложение",
-            "Нет пакетов лечения",
+            "Нет понятных пакетов и тарифов",
             "Слабые сценарии",
-            "Администратор теряет пациентов",
+            "Менеджер теряет заявки",
             "Нет аналитики",
             "Никто не понимает, какая реклама приносит деньги",
           ].map((t) => (
@@ -181,11 +181,11 @@ function LandingPage() {
       {/* 3 CASE */}
       <Section>
         <div className="text-xs font-semibold uppercase tracking-wider text-brand">Реальный кейс</div>
-        <h2 className="mt-2 text-2xl font-extrabold text-ink tracking-tight">Как центр реабилитации получил +13 000 000 ₸ при том же рекламном бюджете</h2>
+        <h2 className="mt-2 text-2xl font-extrabold text-ink tracking-tight">Как один клиент получил +13 000 000 ₸ при том же рекламном бюджете</h2>
 
         <div className="mt-5 rounded-xl border-l-4 border-l-gold border border-border bg-surface-2/60 p-4 shadow-sm">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Запрос</div>
-          <p className="mt-1 text-[15px] font-medium text-ink">«Нам нужен SMM, чтобы было больше пациентов.»</p>
+          <p className="mt-1 text-[15px] font-medium text-ink">«Нам нужен SMM, чтобы было больше клиентов.»</p>
           <p className="mt-3 text-[14px] text-ink-muted leading-relaxed">
             После диагностики стало понятно, что SMM тут не поможет.
           </p>
@@ -198,7 +198,7 @@ function LandingPage() {
           <ul className="mt-3 space-y-3 text-[15px] text-ink">
             {[
               "Упаковали услуги",
-              "Собрали пакеты лечения",
+              "Собрали понятные пакеты и тарифы",
               "Настроили аналитику",
               "Подготовили сценарии для видео",
               "Запустили рекламу",
@@ -214,7 +214,7 @@ function LandingPage() {
             {[
               { label: "Заявок", value: "415" },
               { label: "Оплаченных диагностик", value: "107" },
-              { label: "Новых пациентов", value: "29" },
+              { label: "Новых клиентов", value: "29" },
               { label: "Средний чек", value: "350 000 ₸" },
             ].map((item) => (
               <div key={item.label} className="rounded-xl border border-border/60 bg-surface-2/30 p-3 shadow-sm hover:border-brand/10 hover:bg-surface-2/50 transition-all duration-200">
@@ -234,28 +234,28 @@ function LandingPage() {
         {/* Короткие кейсы */}
         <div className="mt-10">
           <div className="text-xs font-semibold uppercase tracking-wider text-brand">Ещё кейсы</div>
-          <h3 className="mt-2 text-xl font-extrabold text-ink tracking-tight">Короткие истории клиник</h3>
+          <h3 className="mt-2 text-xl font-extrabold text-ink tracking-tight">Короткие истории клиентов</h3>
 
           <div className="mt-5 space-y-4">
             {[
               {
-                clinic: "Стоматология в Алматы",
+                clinic: "Сеть услуг в Алматы",
                 request: "«Реклама сливает бюджет, заявок нет.»",
                 action: "Переупаковали услугу имплантации, собрали пакет «под ключ», перезапустили рекламу.",
-                metric: "+42 пациента",
+                metric: "+42 клиента",
                 sub: "за 1 месяц",
               },
               {
-                clinic: "Гинекологическая клиника",
-                request: "«Пациенты записываются, но не доходят.»",
-                action: "Внедрили скрипт администратора и напоминания, настроили сквозную аналитику.",
+                clinic: "Сервисная компания",
+                request: "«Клиенты записываются, но не доходят.»",
+                action: "Внедрили скрипт менеджера и напоминания, настроили сквозную аналитику.",
                 metric: "×2,3",
                 sub: "конверсия в визит",
               },
               {
-                clinic: "Центр косметологии",
-                request: "«Хотим больше первичных пациентов.»",
-                action: "Сделали оффер-магнит на диагностику кожи, запустили таргет и рилс по сценариям.",
+                clinic: "Онлайн-школа",
+                request: "«Хотим больше новых клиентов.»",
+                action: "Сделали оффер-магнит на бесплатную консультацию, запустили таргет и рилс по сценариям.",
                 metric: "+5 800 000 ₸",
                 sub: "выручка за 6 недель",
               },
@@ -283,7 +283,7 @@ function LandingPage() {
         <div className="mt-5 space-y-3.5 text-[15px] leading-relaxed">
           {[
             "Не предлагаем сразу договор на год",
-            "Сначала показываем, как работает наша система именно на вашей клинике.",
+            "Сначала показываем, как работает наша система именно в вашем бизнесе.",
             "После недели вы сами принимаете решение продолжать работу или нет.",
           ].map((text, idx) => (
             <div key={idx} className="flex gap-3 items-start bg-white/10 p-3.5 rounded-xl backdrop-blur-sm border border-white/10 transition-all duration-200 hover:bg-white/15">
@@ -301,7 +301,7 @@ function LandingPage() {
           <div className="relative overflow-hidden aspect-square w-full group">
             <img
               src="/yuri.jpg"
-              alt="Юрий Валерьевич — эксперт по маркетингу медицинских клиник"
+              alt="Юрий Валерьевич — эксперт по маркетингу и рекламе"
               width={768}
               height={768}
               loading="lazy"
@@ -312,15 +312,15 @@ function LandingPage() {
           <div className="p-6">
             <div className="text-xl font-extrabold text-ink">Юрий Валерьевич</div>
             <p className="mt-1 text-[14px] font-medium text-brand">
-              Эксперт по маркетингу медицинских клиник
+              Эксперт по маркетингу и рекламе
             </p>
             <ul className="mt-5 space-y-3 text-[15px] text-ink border-t border-border/60 pt-5">
               {[
-                "Более 5 лет в медицинском маркетинге",
-                "Более 50 клиник работают по нашей системе",
-                "Коммерческий директор медицинского центра",
-                "Отвечаю за увеличение количества платных пациентов",
-                "Работаю только с медицинскими клиниками и частными врачами",
+                "Более 5 лет в маркетинге и рекламе",
+                "Более 50 компаний работают по нашей системе",
+                "Опыт коммерческого директора",
+                "Отвечаю за рост числа платящих клиентов",
+                "Работаю с малым и средним бизнесом в разных нишах",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"><Check /> <span>{t}</span></li>
               ))}
@@ -353,7 +353,7 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что вы получите через 7 дней</h2>
         <ul className="mt-6 space-y-3">
           {[
-            "Полную картину маркетинга клиники",
+            "Полную картину маркетинга бизнеса",
             "План роста выручки",
             "Новые рекламные офферы",
             "Сценарии рекламы",
@@ -373,12 +373,12 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold text-ink tracking-tight">Для кого подходит</h2>
         <ul className="mt-5 grid grid-cols-2 gap-3">
           {[
-            "Стоматологии",
-            "Косметологии",
-            "Реабилитационные центры",
-            "Многопрофильные клиники",
-            "Медицинские центры",
-            "Частные врачи",
+            "Услуги и сервис",
+            "Онлайн-школы и эксперты",
+            "Розница и e-commerce",
+            "B2B-компании",
+            "Салоны и студии",
+            "Локальный бизнес",
           ].map((t) => (
             <li key={t} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-3.5 text-[14px] font-bold text-ink hover:border-brand/20 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
               <span className="text-brand font-extrabold text-lg leading-none shrink-0">•</span>
@@ -397,7 +397,7 @@ function LandingPage() {
             <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя маркетинга</h2>
             <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-              В течение недели полностью погружаемся в работу вашей клиники и готовим систему роста.
+              В течение недели полностью погружаемся в работу вашего бизнеса и готовим систему роста.
             </p>
             <div className="mt-4 rounded-xl border border-brand/20 bg-brand-soft/60 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
               <span className="text-brand text-lg shrink-0" aria-hidden>💡</span>
@@ -419,10 +419,10 @@ function LandingPage() {
         <Accordion type="single" collapsible className="mt-5 space-y-3">
           <AccordionItem value="q1" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
             <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
-              За 7 дней будут пациенты?
+              За 7 дней будут клиенты?
             </AccordionTrigger>
             <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
-              Главная цель недели — провести глубокую подготовку, внедрить ключевые изменения и дать клинике готовую систему для роста. В зависимости от этапа работ и готовности клиники первые обращения могут появиться уже в процессе.
+              Главная цель недели — провести глубокую подготовку, внедрить ключевые изменения и дать бизнесу готовую систему для роста. В зависимости от этапа работ и готовности компании первые обращения могут появиться уже в процессе.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="q2" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
@@ -438,7 +438,7 @@ function LandingPage() {
               Вы работаете по всему Казахстану?
             </AccordionTrigger>
             <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
-              Да. Работаем онлайн с клиниками и частными врачами по всему Казахстану.
+              Да. Работаем онлайн с бизнесом любой ниши по всему Казахстану.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -449,13 +449,13 @@ function LandingPage() {
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
           <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Начнём с разбора вашей клиники
+            Начнём с разбора вашего бизнеса
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-            За 20 минут в WhatsApp покажу 3 точки, где ваша клиника теряет пациентов, и что можно исправить. Без обязательств.
+            За 20 минут в WhatsApp покажу 3 точки, где ваш бизнес теряет клиентов, и что можно исправить. Без обязательств.
           </p>
           <ul className="mt-5 space-y-2.5 text-[14px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашей клинике, не общие советы</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашему бизнесу, не общие советы</span></li>
             <li className="flex items-start gap-3"><Check /> <span>Отвечу лично — не менеджер отдела продаж</span></li>
             <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
           </ul>
@@ -465,14 +465,14 @@ function LandingPage() {
           <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
             <span className="text-lg shrink-0" aria-hidden>🛡</span>
             <span className="text-ink-muted">
-              Если по итогам недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста для вашей клиники — вернём деньги.
+              Если по итогам недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста для вашего бизнеса — вернём деньги.
             </span>
           </div>
         </div>
       </Section>
 
       <footer className="px-5 pb-6 pt-4 text-center text-[12px] text-ink-muted border-t border-border/40 mt-8 max-w-[520px] mx-auto">
-        Юрий Валерьевич · Маркетинг для медицинских клиник ·
+        Юрий Валерьевич · Маркетинг и реклама для бизнеса ·
       </footer>
     </main>
   );
