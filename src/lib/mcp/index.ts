@@ -7,9 +7,9 @@ import getOfferTool from "./tools/get-offer";
 
 export default defineMcp({
   name: "med-marketing-mcp",
-  title: "Маркетинг для клиник — MCP",
+  title: "Маркетинг для компаний — MCP",
   version: "0.1.0",
   instructions:
-    "Инструменты для получения информации о тестовой неделе маркетинга Юрия Валерьевича для медицинских клиник: оффер, кейс, контакты и данные об эксперте. Используйте get_contact, чтобы получить ссылку WhatsApp для записи.",
+    "Инструменты для получения информации о тестовой неделе маркетинга Юрия Валерьевича для бизнеса: оффер, кейс, контакты и данные об эксперте. Используйте get_contact, чтобы получить ссылку WhatsApp для записи.",
   tools: [getOfferTool, getCaseStudyTool, getExpertTool, getContactTool],
 });
