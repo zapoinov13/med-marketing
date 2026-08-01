@@ -146,6 +146,25 @@ function LandingPage() {
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             Тестовая неделя за 50 000 ₸&nbsp;{"\n"}&nbsp;по желанию, после разбора
           </p>
+
+          <div className="mt-5 grid grid-cols-2 gap-2.5">
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              Гарантия возврата
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              5+ лет опыта
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              50+ компаний
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              Личное ведение
+            </div>
+          </div>
         </div>
 
       </Section>
@@ -491,7 +510,10 @@ function LandingPage() {
       <Section>
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
-          <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand border border-brand/10">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Отвечаю в течение 15 минут
+          </div>
+          <h2 className="mt-4 text-2xl font-extrabold leading-tight text-ink tracking-tight">
             Начнём с разбора вашего бизнеса
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
