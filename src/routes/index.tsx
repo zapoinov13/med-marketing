@@ -146,6 +146,25 @@ function LandingPage() {
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             Тестовая неделя за 50 000 ₸&nbsp;{"\n"}&nbsp;по желанию, после разбора
           </p>
+
+          <div className="mt-5 grid grid-cols-2 gap-2.5">
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              Гарантия возврата
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              5+ лет опыта
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              50+ компаний
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/80 p-2.5 text-[12px] font-semibold text-ink shadow-sm">
+              <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-brand text-[10px]">✓</span>
+              Личное ведение
+            </div>
+          </div>
         </div>
 
       </Section>
@@ -175,6 +194,34 @@ function LandingPage() {
         <div className="mt-6 rounded-xl border border-destructive/10 bg-destructive/5 p-4 text-[15px] font-semibold text-ink leading-relaxed flex items-start gap-3.5 shadow-sm">
           <span className="text-lg shrink-0" aria-hidden>⚠️</span>
           <span>Поэтому мы сначала разбираем систему, а потом запускаем рекламу.</span>
+        </div>
+      </Section>
+
+      {/* TRUST */}
+      <Section className="bg-surface-2">
+        <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
+          Почему можно доверять
+        </h2>
+        <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
+          Никаких «менеджеров по продажам» и скрытых платежей. Работаю прозрачно и несу ответственность за результат.
+        </p>
+        <div className="mt-6 grid grid-cols-1 gap-3.5">
+          {[
+            { icon: "👤", title: "Лично веду каждый проект", desc: "Вы общаетесь со мной, а не с отделом продаж или подрядчиками." },
+            { icon: "💰", title: "Фиксированная цена", desc: "Стоимость недели известна заранее. Никаких дополнительных счетов в процессе." },
+            { icon: "📊", title: "Работаю с цифрами", desc: "Более 5 лет помогаю бизнесу расти за счёт маркетинга и рекламы." },
+            { icon: "🛡", title: "Гарантия возврата 50 000 ₸", desc: "Если после недели не будет понятного плана и точек роста — верну деньги." },
+          ].map((card) => (
+            <div key={card.title} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+              <div className="flex items-start gap-3.5">
+                <span className="text-2xl shrink-0" aria-hidden>{card.icon}</span>
+                <div>
+                  <div className="text-[16px] font-extrabold text-ink leading-tight">{card.title}</div>
+                  <p className="mt-1 text-[14px] leading-relaxed text-ink-muted">{card.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
@@ -399,9 +446,24 @@ function LandingPage() {
             <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
               В течение недели полностью погружаемся в работу вашего бизнеса и готовим систему роста.
             </p>
-            <div className="mt-4 rounded-xl border border-brand/20 bg-brand-soft/60 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
-              <span className="text-brand text-lg shrink-0" aria-hidden>💡</span>
-              <p>Если после тестовой недели вы решите продолжить сотрудничество стоимость недели засчитывается в оплату основного проекта.</p>
+
+            <ul className="mt-5 space-y-2.5">
+              {[
+                "Аудит, стратегия, контент и реклама",
+                "Скрипты и настройка аналитики",
+                "Личное ведение без передачи подрядчикам",
+                "План роста на 30 дней",
+              ].map((inc) => (
+                <li key={inc} className="flex items-start gap-2.5 text-[14px] text-ink">
+                  <Check />
+                  <span>{inc}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-5 rounded-xl border border-gold/30 bg-gold/10 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
+              <span className="text-gold text-lg shrink-0" aria-hidden>🛡</span>
+              <p><span className="font-bold">Гарантия.</span> Если после недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
               <LeadCta source="price_block">Записаться на тестовую неделю</LeadCta>
@@ -448,7 +510,10 @@ function LandingPage() {
       <Section>
         <div className="relative overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft p-6 shadow-card">
           <div className="pattern-dots absolute inset-0 -z-10 text-brand/5" aria-hidden="true" />
-          <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand border border-brand/10">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Отвечаю в течение 15 минут
+          </div>
+          <h2 className="mt-4 text-2xl font-extrabold leading-tight text-ink tracking-tight">
             Начнём с разбора вашего бизнеса
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
@@ -471,8 +536,13 @@ function LandingPage() {
         </div>
       </Section>
 
-      <footer className="px-5 pb-6 pt-4 text-center text-[12px] text-ink-muted border-t border-border/40 mt-8 max-w-[520px] mx-auto">
-        Юрий Валерьевич · Маркетинг и реклама для бизнеса ·
+      <footer className="px-5 pb-6 pt-4 text-center text-[12px] text-ink-muted border-t border-border/40 mt-8 max-w-[520px] mx-auto space-y-2">
+        <div>Юрий Валерьевич · Маркетинг и реклама для бизнеса</div>
+        <div className="flex items-center justify-center gap-3">
+          <a href="https://wa.me/77472842595" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">WhatsApp</a>
+          <span>·</span>
+          <a href="tel:+77472842595" className="text-brand hover:underline">+7 747 284 25 95</a>
+        </div>
       </footer>
     </main>
   );
