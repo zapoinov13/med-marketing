@@ -106,7 +106,7 @@ function LandingPage() {
           <br />всего за&nbsp; 50 000 ₸
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          За 7 дней полностью погружаемся в работу вашего бизнеса, находим точки потери клиентов, запускаем рекламу и показываем, что именно нужно делать, чтобы получать больше заявок и продаж.
+          За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим понятный план роста.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
