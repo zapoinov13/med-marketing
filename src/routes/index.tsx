@@ -106,7 +106,7 @@ function LandingPage() {
           <br />всего за&nbsp; 50 000 ₸
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          За 7 дней полностью погружаемся в работу вашего бизнеса, находим точки потери клиентов, запускаем рекламу и показываем, что именно нужно делать, чтобы получать больше заявок и продаж.
+          За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим понятный план роста.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
@@ -174,19 +174,17 @@ function LandingPage() {
       {/* 2 PROBLEM */}
       <Section className="bg-surface-2">
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему мы предлагаем сначала тестовую неделю?
+          Почему сначала тестовая неделя?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Потому что большинство компаний думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
+          Кажется, что проблема в рекламе. Обычно деньги теряются раньше:
         </p>
         <ul className="mt-6 space-y-3">
           {[
-            "Неправильное предложение",
-            "Нет понятных пакетов и тарифов",
-            "Слабые сценарии",
+            "Непонятное предложение",
+            "Нет пакетов и тарифов",
             "Менеджер теряет заявки",
             "Нет аналитики",
-            "Никто не понимает, какая реклама приносит деньги",
           ].map((t) => (
             <li key={t} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
               <Cross /> <span>{t}</span>
@@ -204,15 +202,11 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
           Почему можно доверять
         </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Никаких «менеджеров по продажам» и скрытых платежей. Работаю прозрачно и несу ответственность за результат.
-        </p>
         <div className="mt-6 grid grid-cols-1 gap-3.5">
           {[
-            { icon: "👤", title: "Лично веду каждый проект", desc: "Вы общаетесь со мной, а не с отделом продаж или подрядчиками." },
-            { icon: "💰", title: "Фиксированная цена", desc: "Стоимость недели известна заранее. Никаких дополнительных счетов в процессе." },
-            { icon: "📊", title: "Работаю с цифрами", desc: "Более 5 лет помогаю бизнесу расти за счёт маркетинга и рекламы." },
-            { icon: "🛡", title: "Гарантия возврата 50 000 ₸", desc: "Если после недели не будет понятного плана и точек роста — верну деньги." },
+            { icon: "👤", title: "Веду проект лично", desc: "Общаетесь со мной, а не с отделом продаж." },
+            { icon: "💰", title: "Фиксированная цена", desc: "Никаких доплат в процессе." },
+            { icon: "🛡", title: "Гарантия возврата", desc: "Нет результата — верну 50 000 ₸." },
           ].map((card) => (
             <div key={card.title} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
               <div className="flex items-start gap-3.5">
@@ -235,22 +229,17 @@ function LandingPage() {
         <div className="mt-5 rounded-xl border-l-4 border-l-gold border border-border bg-surface-2/60 p-4 shadow-sm">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Запрос</div>
           <p className="mt-1 text-[15px] font-medium text-ink">«Нам нужен SMM, чтобы было больше клиентов.»</p>
-          <p className="mt-3 text-[14px] text-ink-muted leading-relaxed">
-            После диагностики стало понятно, что SMM тут не поможет.
-          </p>
         </div>
 
         <div className="mt-6">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
-            Что сделали после разбора
+            Что сделали
           </div>
           <ul className="mt-3 space-y-3 text-[15px] text-ink">
             {[
-              "Упаковали услуги",
-              "Собрали понятные пакеты и тарифы",
+              "Упаковали услуги и тарифы",
               "Настроили аналитику",
-              "Подготовили сценарии для видео",
-              "Запустили рекламу",
+              "Запустили рекламу по новым сценариям",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3 transition-transform duration-200 hover:translate-x-1"><Check /> <span>{t}</span></li>
             ))}
@@ -287,31 +276,12 @@ function LandingPage() {
 
           <div className="mt-5 space-y-4">
             {[
-              {
-                clinic: "Сеть услуг в Алматы",
-                request: "«Реклама сливает бюджет, заявок нет.»",
-                action: "Переупаковали услугу имплантации, собрали пакет «под ключ», перезапустили рекламу.",
-                metric: "+42 клиента",
-                sub: "за 1 месяц",
-              },
-              {
-                clinic: "Сервисная компания",
-                request: "«Клиенты записываются, но не доходят.»",
-                action: "Внедрили скрипт менеджера и напоминания, настроили сквозную аналитику.",
-                metric: "×2,3",
-                sub: "конверсия в визит",
-              },
-              {
-                clinic: "Онлайн-школа",
-                request: "«Хотим больше новых клиентов.»",
-                action: "Сделали оффер-магнит на бесплатную консультацию, запустили таргет и рилс по сценариям.",
-                metric: "+5 800 000 ₸",
-                sub: "выручка за 6 недель",
-              },
+              { clinic: "Сеть услуг в Алматы", action: "Переупаковали услугу и перезапустили рекламу.", metric: "+42 клиента", sub: "за 1 месяц" },
+              { clinic: "Сервисная компания", action: "Внедрили скрипт продаж и аналитику.", metric: "×2,3", sub: "конверсия в визит" },
+              { clinic: "Онлайн-школа", action: "Сделали оффер и запустили таргет.", metric: "+5 800 000 ₸", sub: "за 6 недель" },
             ].map((c) => (
               <div key={c.clinic} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-brand">{c.clinic}</div>
-                <p className="mt-2 text-[15px] font-semibold text-ink leading-snug">{c.request}</p>
                 <p className="mt-2 text-[14px] text-ink-muted leading-relaxed">{c.action}</p>
                 <div className="mt-4 flex items-baseline gap-2 rounded-xl bg-brand-soft px-3.5 py-2.5">
                   <span className="text-xl font-black text-brand tracking-tight">{c.metric}</span>
@@ -365,11 +335,9 @@ function LandingPage() {
             </p>
             <ul className="mt-5 space-y-3 text-[15px] text-ink border-t border-border/60 pt-5">
               {[
-                "Более 5 лет в маркетинге и рекламе",
-                "Более 50 компаний работают по нашей системе",
+                "5+ лет в маркетинге и рекламе",
+                "50+ компаний работают по системе",
                 "Опыт коммерческого директора",
-                "Отвечаю за рост числа платящих клиентов",
-                "Работаю с малым и средним бизнесом в разных нишах",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"><Check /> <span>{t}</span></li>
               ))}
@@ -402,13 +370,10 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что вы получите через 7 дней</h2>
         <ul className="mt-6 space-y-3">
           {[
-            "Полную картину маркетинга бизнеса",
-            "План роста выручки",
-            "Новые рекламные офферы",
-            "Сценарии рекламы",
-            "План продвижения",
+            "Полную картину вашего маркетинга",
+            "Новые офферы и рекламу",
             "Понимание, куда уходят деньги",
-            "Приоритетные задачи на ближайшие 30 дней",
+            "План задач на 30 дней",
           ].map((t) => (
             <li key={t} className="flex items-center gap-3.5 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
               <Check /> <span>{t}</span>
@@ -445,15 +410,11 @@ function LandingPage() {
             <div className="text-xs font-bold uppercase tracking-wider text-brand">Стоимость</div>
             <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя маркетинга</h2>
             <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
-            <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-              В течение недели полностью погружаемся в работу вашего бизнеса и готовим систему роста.
-            </p>
 
             <ul className="mt-5 space-y-2.5">
               {[
-                "Аудит, стратегия, контент и реклама",
-                "Скрипты и настройка аналитики",
-                "Личное ведение без передачи подрядчикам",
+                "Аудит и стратегия",
+                "Реклама и креативы",
                 "План роста на 30 дней",
               ].map((inc) => (
                 <li key={inc} className="flex items-start gap-2.5 text-[14px] text-ink">
@@ -465,14 +426,12 @@ function LandingPage() {
 
             <div className="mt-5 rounded-xl border border-gold/30 bg-gold/10 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
               <span className="text-gold text-lg shrink-0" aria-hidden>🛡</span>
-              <p><span className="font-bold">Гарантия.</span> Если после недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста — верну 50 000 ₸.</p>
+              <p><span className="font-bold">Гарантия.</span> Нет плана и точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
               <LeadCta source="price_block">Записаться на тестовую неделю</LeadCta>
             </div>
-            <p className="mt-3 text-center text-[12px] text-ink-muted">
-              Не готовы сразу? <span className="font-semibold text-ink">Начните с бесплатного разбора</span> — кнопка вверху страницы
-            </p>
+
           </div>
         </div>
       </Section>
@@ -516,25 +475,15 @@ function LandingPage() {
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Отвечаю в течение 15 минут
           </div>
           <h2 className="mt-4 text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Начнём с разбора вашего бизнеса
+            Начнём с бесплатного разбора
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-            За 20 минут в WhatsApp покажу 3 точки, где ваш бизнес теряет клиентов, и что можно исправить. Без обязательств.
+            20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
           </p>
-          <ul className="mt-5 space-y-2.5 text-[14px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашему бизнесу, не общие советы</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Отвечу лично — не менеджер отдела продаж</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
-          </ul>
           <div className="mt-6">
             <LeadCta source="final_cta">Получить бесплатный разбор</LeadCta>
           </div>
-          <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
-            <span className="text-lg shrink-0" aria-hidden>🛡</span>
-            <span className="text-ink-muted">
-              Если по итогам недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста для вашего бизнеса — вернём деньги.
-            </span>
-          </div>
+
         </div>
       </Section>
 
