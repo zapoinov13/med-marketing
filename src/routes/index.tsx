@@ -516,25 +516,15 @@ function LandingPage() {
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Отвечаю в течение 15 минут
           </div>
           <h2 className="mt-4 text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Начнём с разбора вашего бизнеса
+            Начнём с бесплатного разбора
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-            За 20 минут в WhatsApp покажу 3 точки, где ваш бизнес теряет клиентов, и что можно исправить. Без обязательств.
+            20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
           </p>
-          <ul className="mt-5 space-y-2.5 text-[14px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Разбор по вашему бизнесу, не общие советы</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Отвечу лично — не менеджер отдела продаж</span></li>
-            <li className="flex items-start gap-3"><Check /> <span>Дальше — либо работаете сами, либо берём тестовую неделю</span></li>
-          </ul>
           <div className="mt-6">
             <LeadCta source="final_cta">Получить бесплатный разбор</LeadCta>
           </div>
-          <div className="mt-5 flex gap-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-ink border border-brand/10 shadow-sm">
-            <span className="text-lg shrink-0" aria-hidden>🛡</span>
-            <span className="text-ink-muted">
-              Если по итогам недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста для вашего бизнеса — вернём деньги.
-            </span>
-          </div>
+
         </div>
       </Section>
 
