@@ -174,19 +174,17 @@ function LandingPage() {
       {/* 2 PROBLEM */}
       <Section className="bg-surface-2">
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему мы предлагаем сначала тестовую неделю?
+          Почему сначала тестовая неделя?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Потому что большинство компаний думают, что проблема в рекламе. На самом деле деньги теряются намного раньше.
+          Кажется, что проблема в рекламе. Обычно деньги теряются раньше:
         </p>
         <ul className="mt-6 space-y-3">
           {[
-            "Неправильное предложение",
-            "Нет понятных пакетов и тарифов",
-            "Слабые сценарии",
+            "Непонятное предложение",
+            "Нет пакетов и тарифов",
             "Менеджер теряет заявки",
             "Нет аналитики",
-            "Никто не понимает, какая реклама приносит деньги",
           ].map((t) => (
             <li key={t} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
               <Cross /> <span>{t}</span>
