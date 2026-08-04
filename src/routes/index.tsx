@@ -365,11 +365,9 @@ function LandingPage() {
             </p>
             <ul className="mt-5 space-y-3 text-[15px] text-ink border-t border-border/60 pt-5">
               {[
-                "Более 5 лет в маркетинге и рекламе",
-                "Более 50 компаний работают по нашей системе",
+                "5+ лет в маркетинге и рекламе",
+                "50+ компаний работают по системе",
                 "Опыт коммерческого директора",
-                "Отвечаю за рост числа платящих клиентов",
-                "Работаю с малым и средним бизнесом в разных нишах",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"><Check /> <span>{t}</span></li>
               ))}
