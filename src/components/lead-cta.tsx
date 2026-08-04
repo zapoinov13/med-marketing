@@ -15,8 +15,7 @@ import { Label } from "@/components/ui/label";
 
 const WA_NUMBER = "77472842595";
 const WA_DEFAULT_TEXT =
-  "Добрый день! Хочу запустить маркетинг за 7 дней (тестовая неделя за 50 000 ₸).";
-
+  "Добрый день! Я хочу записаться на неделю маркетинга для моего бизнеса.";
 
 type Props = {
   children: ReactNode;
@@ -174,7 +173,7 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
       <DialogTrigger asChild>
         <button
           type="button"
-          aria-label={ariaLabel ?? "Оставить заявку на запуск маркетинга"}
+          aria-label={ariaLabel ?? "Оставить заявку на разбор бизнеса"}
           className={className ?? primaryButtonClass()}
         >
           {children}
@@ -191,11 +190,10 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
                 Спасибо за заявку!
               </DialogTitle>
               <DialogDescription className="text-[15px] text-ink-muted leading-relaxed mt-2 text-center">
-                Свяжусь с вами в ближайшее время через WhatsApp, обсудим ваш бизнес и
-                договоримся о старте тестовой недели.
+                Я свяжусь с вами в ближайшее время через WhatsApp, чтобы обсудить
+                удобное время для разбора вашего бизнеса. Будьте на связи.
               </DialogDescription>
             </DialogHeader>
-
             <a
               href={waHref}
               target="_blank"
@@ -215,14 +213,13 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
           <div className="p-6">
             <DialogHeader>
               <DialogTitle className="text-xl font-extrabold text-ink leading-tight">
-                Запуск маркетинга за 7 дней
+                Бесплатный разбор бизнеса
               </DialogTitle>
               <DialogDescription className="text-[14px] text-ink-muted leading-relaxed mt-2">
-                Оставьте контакты — свяжусь через WhatsApp, обсудим ваш бизнес и стартуем
-                тестовую неделю за 50 000 ₸.
+                Оставьте контактные данные — свяжусь с вами через WhatsApp и обсудим
+                удобное время для разбора.
               </DialogDescription>
             </DialogHeader>
-
 
             <form onSubmit={onSubmit} className="mt-5 space-y-4">
               <div className="space-y-1.5">
