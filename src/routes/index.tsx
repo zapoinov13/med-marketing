@@ -445,15 +445,11 @@ function LandingPage() {
             <div className="text-xs font-bold uppercase tracking-wider text-brand">Стоимость</div>
             <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя маркетинга</h2>
             <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
-            <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-              В течение недели полностью погружаемся в работу вашего бизнеса и готовим систему роста.
-            </p>
 
             <ul className="mt-5 space-y-2.5">
               {[
-                "Аудит, стратегия, контент и реклама",
-                "Скрипты и настройка аналитики",
-                "Личное ведение без передачи подрядчикам",
+                "Аудит и стратегия",
+                "Реклама и креативы",
                 "План роста на 30 дней",
               ].map((inc) => (
                 <li key={inc} className="flex items-start gap-2.5 text-[14px] text-ink">
@@ -465,14 +461,12 @@ function LandingPage() {
 
             <div className="mt-5 rounded-xl border border-gold/30 bg-gold/10 p-4 text-[14px] leading-relaxed text-ink flex gap-3">
               <span className="text-gold text-lg shrink-0" aria-hidden>🛡</span>
-              <p><span className="font-bold">Гарантия.</span> Если после недели вы не получите конкретный план внедрения, новые рекламные материалы и список точек роста — верну 50 000 ₸.</p>
+              <p><span className="font-bold">Гарантия.</span> Нет плана и точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
               <LeadCta source="price_block">Записаться на тестовую неделю</LeadCta>
             </div>
-            <p className="mt-3 text-center text-[12px] text-ink-muted">
-              Не готовы сразу? <span className="font-semibold text-ink">Начните с бесплатного разбора</span> — кнопка вверху страницы
-            </p>
+
           </div>
         </div>
       </Section>
