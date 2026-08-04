@@ -146,7 +146,7 @@ function LandingPage() {
             <LeadCta source="hero">Получить бесплатный разбор</LeadCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
-            Тестовая неделя за 50 000 ₸&nbsp;{"\n"}&nbsp;по желанию, после разбора
+            Тестовая неделя за 50 000 ₸&nbsp;{"\n"}по желанию, после разбора
           </p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5">
