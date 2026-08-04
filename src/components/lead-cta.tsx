@@ -174,7 +174,7 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
       <DialogTrigger asChild>
         <button
           type="button"
-          aria-label={ariaLabel ?? "Оставить заявку на разбор бизнеса"}
+          aria-label={ariaLabel ?? "Оставить заявку на запуск маркетинга"}
           className={className ?? primaryButtonClass()}
         >
           {children}
