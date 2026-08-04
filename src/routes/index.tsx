@@ -235,22 +235,17 @@ function LandingPage() {
         <div className="mt-5 rounded-xl border-l-4 border-l-gold border border-border bg-surface-2/60 p-4 shadow-sm">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Запрос</div>
           <p className="mt-1 text-[15px] font-medium text-ink">«Нам нужен SMM, чтобы было больше клиентов.»</p>
-          <p className="mt-3 text-[14px] text-ink-muted leading-relaxed">
-            После диагностики стало понятно, что SMM тут не поможет.
-          </p>
         </div>
 
         <div className="mt-6">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
-            Что сделали после разбора
+            Что сделали
           </div>
           <ul className="mt-3 space-y-3 text-[15px] text-ink">
             {[
-              "Упаковали услуги",
-              "Собрали понятные пакеты и тарифы",
+              "Упаковали услуги и тарифы",
               "Настроили аналитику",
-              "Подготовили сценарии для видео",
-              "Запустили рекламу",
+              "Запустили рекламу по новым сценариям",
             ].map((t) => (
               <li key={t} className="flex items-start gap-3 transition-transform duration-200 hover:translate-x-1"><Check /> <span>{t}</span></li>
             ))}
