@@ -213,13 +213,14 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
           <div className="p-6">
             <DialogHeader>
               <DialogTitle className="text-xl font-extrabold text-ink leading-tight">
-                Бесплатный разбор бизнеса
+                Запуск маркетинга за 7 дней
               </DialogTitle>
               <DialogDescription className="text-[14px] text-ink-muted leading-relaxed mt-2">
-                Оставьте контактные данные — свяжусь с вами через WhatsApp и обсудим
-                удобное время для разбора.
+                Оставьте контакты — свяжусь через WhatsApp, обсудим ваш бизнес и стартуем
+                тестовую неделю за 50 000 ₸.
               </DialogDescription>
             </DialogHeader>
+
 
             <form onSubmit={onSubmit} className="mt-5 space-y-4">
               <div className="space-y-1.5">
