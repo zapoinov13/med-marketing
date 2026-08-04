@@ -287,31 +287,12 @@ function LandingPage() {
 
           <div className="mt-5 space-y-4">
             {[
-              {
-                clinic: "Сеть услуг в Алматы",
-                request: "«Реклама сливает бюджет, заявок нет.»",
-                action: "Переупаковали услугу имплантации, собрали пакет «под ключ», перезапустили рекламу.",
-                metric: "+42 клиента",
-                sub: "за 1 месяц",
-              },
-              {
-                clinic: "Сервисная компания",
-                request: "«Клиенты записываются, но не доходят.»",
-                action: "Внедрили скрипт менеджера и напоминания, настроили сквозную аналитику.",
-                metric: "×2,3",
-                sub: "конверсия в визит",
-              },
-              {
-                clinic: "Онлайн-школа",
-                request: "«Хотим больше новых клиентов.»",
-                action: "Сделали оффер-магнит на бесплатную консультацию, запустили таргет и рилс по сценариям.",
-                metric: "+5 800 000 ₸",
-                sub: "выручка за 6 недель",
-              },
+              { clinic: "Сеть услуг в Алматы", action: "Переупаковали услугу и перезапустили рекламу.", metric: "+42 клиента", sub: "за 1 месяц" },
+              { clinic: "Сервисная компания", action: "Внедрили скрипт продаж и аналитику.", metric: "×2,3", sub: "конверсия в визит" },
+              { clinic: "Онлайн-школа", action: "Сделали оффер и запустили таргет.", metric: "+5 800 000 ₸", sub: "за 6 недель" },
             ].map((c) => (
               <div key={c.clinic} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-brand">{c.clinic}</div>
-                <p className="mt-2 text-[15px] font-semibold text-ink leading-snug">{c.request}</p>
                 <p className="mt-2 text-[14px] text-ink-muted leading-relaxed">{c.action}</p>
                 <div className="mt-4 flex items-baseline gap-2 rounded-xl bg-brand-soft px-3.5 py-2.5">
                   <span className="text-xl font-black text-brand tracking-tight">{c.metric}</span>
