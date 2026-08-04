@@ -402,13 +402,10 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что вы получите через 7 дней</h2>
         <ul className="mt-6 space-y-3">
           {[
-            "Полную картину маркетинга бизнеса",
-            "План роста выручки",
-            "Новые рекламные офферы",
-            "Сценарии рекламы",
-            "План продвижения",
+            "Полную картину вашего маркетинга",
+            "Новые офферы и рекламу",
             "Понимание, куда уходят деньги",
-            "Приоритетные задачи на ближайшие 30 дней",
+            "План задач на 30 дней",
           ].map((t) => (
             <li key={t} className="flex items-center gap-3.5 rounded-xl border border-border bg-card p-3.5 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:translate-x-1 hover:border-brand/20 hover:shadow">
               <Check /> <span>{t}</span>
