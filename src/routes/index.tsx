@@ -204,15 +204,11 @@ function LandingPage() {
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
           Почему можно доверять
         </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Никаких «менеджеров по продажам» и скрытых платежей. Работаю прозрачно и несу ответственность за результат.
-        </p>
         <div className="mt-6 grid grid-cols-1 gap-3.5">
           {[
-            { icon: "👤", title: "Лично веду каждый проект", desc: "Вы общаетесь со мной, а не с отделом продаж или подрядчиками." },
-            { icon: "💰", title: "Фиксированная цена", desc: "Стоимость недели известна заранее. Никаких дополнительных счетов в процессе." },
-            { icon: "📊", title: "Работаю с цифрами", desc: "Более 5 лет помогаю бизнесу расти за счёт маркетинга и рекламы." },
-            { icon: "🛡", title: "Гарантия возврата 50 000 ₸", desc: "Если после недели не будет понятного плана и точек роста — верну деньги." },
+            { icon: "👤", title: "Веду проект лично", desc: "Общаетесь со мной, а не с отделом продаж." },
+            { icon: "💰", title: "Фиксированная цена", desc: "Никаких доплат в процессе." },
+            { icon: "🛡", title: "Гарантия возврата", desc: "Нет результата — верну 50 000 ₸." },
           ].map((card) => (
             <div key={card.title} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
               <div className="flex items-start gap-3.5">
