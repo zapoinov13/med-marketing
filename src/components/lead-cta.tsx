@@ -15,7 +15,8 @@ import { Label } from "@/components/ui/label";
 
 const WA_NUMBER = "77472842595";
 const WA_DEFAULT_TEXT =
-  "Добрый день! Я хочу записаться на неделю маркетинга для моего бизнеса.";
+  "Добрый день! Хочу запустить маркетинг за 7 дней (тестовая неделя за 50 000 ₸).";
+
 
 type Props = {
   children: ReactNode;
@@ -190,10 +191,11 @@ export function LeadCta({ children, className, ariaLabel, source }: Props) {
                 Спасибо за заявку!
               </DialogTitle>
               <DialogDescription className="text-[15px] text-ink-muted leading-relaxed mt-2 text-center">
-                Я свяжусь с вами в ближайшее время через WhatsApp, чтобы обсудить
-                удобное время для разбора вашего бизнеса. Будьте на связи.
+                Свяжусь с вами в ближайшее время через WhatsApp, обсудим ваш бизнес и
+                договоримся о старте тестовой недели.
               </DialogDescription>
             </DialogHeader>
+
             <a
               href={waHref}
               target="_blank"
