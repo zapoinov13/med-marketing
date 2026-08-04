@@ -131,10 +131,11 @@ function LandingPage() {
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Бесплатно · 20 минут
           </div>
           <div className="mt-2 text-xl font-extrabold text-ink leading-tight tracking-tight">
-            Разбор маркетинга вашего бизнеса
+            Разбор вашего бизнеса
           </div>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-muted">
-            покажу, где бизнес теряет клиентов и что можно исправить в первую очередь.
+            покажу, где теряете клиентов и что&nbsp;
+            <br />можно исправить в первую очередь.
           </p>
           <ul className="mt-4 space-y-3 text-[15px] text-ink">
             <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы и посадочных</span></li>
