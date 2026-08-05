@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LeadCta } from "@/components/lead-cta";
+import { WaCta } from "@/components/wa-cta";
 import {
   Accordion,
   AccordionContent,
@@ -143,7 +143,7 @@ function LandingPage() {
             
           </ul>
           <div className="mt-6">
-            <LeadCta source="hero">Получить бесплатный разбор</LeadCta>
+            <WaCta source="hero">Получить бесплатный разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             Тестовая неделя за 50 000 ₸&nbsp;&nbsp;{"\n"}по желанию, после разбора
@@ -429,7 +429,7 @@ function LandingPage() {
               <p><span className="font-bold">Гарантия.</span> Нет плана и точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
-              <LeadCta source="price_block">Записаться на тестовую неделю</LeadCta>
+              <WaCta source="price_block">Записаться на тестовую неделю</WaCta>
             </div>
 
           </div>
@@ -481,7 +481,7 @@ function LandingPage() {
             20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
           </p>
           <div className="mt-6">
-            <LeadCta source="final_cta">Получить бесплатный разбор</LeadCta>
+            <WaCta source="final_cta">Получить бесплатный разбор</WaCta>
           </div>
 
         </div>
