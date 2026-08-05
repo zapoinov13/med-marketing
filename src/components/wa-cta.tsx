@@ -8,9 +8,11 @@ type Props = {
   className?: string;
   ariaLabel?: string;
   message?: string;
+  /** Tracking context passed to analytics events */
+  source?: string;
 };
 
-export function WaCta({ children, className, ariaLabel, message }: Props) {
+export function WaCta({ children, className, ariaLabel, message, source }: Props) {
   const href =
     "https://wa.me/77472842595?text=" +
     encodeURIComponent(message ?? DEFAULT_MESSAGE);
@@ -29,6 +31,7 @@ export function WaCta({ children, className, ariaLabel, message }: Props) {
         try {
           (window as unknown as { dataLayer?: Array<Record<string, unknown>> }).dataLayer?.push({
             event: "whatsapp_click",
+            source: source ?? "direct",
           });
         } catch {
           /* noop */
