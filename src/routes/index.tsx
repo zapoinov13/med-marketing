@@ -10,11 +10,11 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Тестовая неделя маркетинга для бизнеса — 50 000 ₸" },
+      { title: "Приведем клиентов в ваш бизнес — 50 000 ₸" },
       {
         name: "description",
         content:
-          "7 дней внедрений в вашем бизнесе: находим слабые места и запускаем систему привлечения клиентов. Кейс: +13 000 000 ₸ выручки.",
+          "Начните с тестовой недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста. Кейс: +13 000 000 ₸ выручки.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -28,11 +28,11 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "Тестовая неделя маркетинга для бизнеса",
+          name: "Приведем клиентов в ваш бизнес",
           provider: { "@type": "Person", name: "Юрий Валерьевич" },
           areaServed: "KZ",
           description:
-            "7 дней глубокой работы с бизнесом: аудит, стратегия, контент, реклама, аналитика, план роста.",
+            "Начните с тестовой недели: аудит, стратегия, реклама, аналитика и план роста для вашего бизнеса.",
           offers: {
             "@type": "Offer",
             price: "50000",
@@ -98,15 +98,14 @@ function LandingPage() {
       <Section className="relative overflow-hidden pt-12">
         <div className="bg-gradient-hero absolute inset-0 -z-10" aria-hidden="true" />
         <span className="inline-flex items-center rounded-full bg-brand-soft px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand border border-brand/10">
-          Маркетинг для вашего бизнеса
+          Приведем клиентов в ваш бизнес
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
-          Неделя маркетинга&nbsp;
-          <br />для вашего бизнеса
-          <br />всего за&nbsp; 50 000 ₸
+          Приведем клиентов
+          <br />в ваш бизнес
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим понятный план роста.
+          Начните с тестовой недели за 50 000 ₸. За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим план роста.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
@@ -146,7 +145,7 @@ function LandingPage() {
             <WaCta source="hero">Получить бесплатный разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
-            Тестовая неделя за 50 000 ₸&nbsp;&nbsp;{"\n"}по желанию, после разбора
+            После разбора можно начать тестовую неделю за 50 000 ₸
           </p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5">
@@ -174,10 +173,10 @@ function LandingPage() {
       {/* 2 PROBLEM */}
       <Section className="bg-surface-2">
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему сначала тестовая неделя?
+          Почему клиенты не приходят?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-          Кажется, что проблема в рекламе. Обычно деньги теряются раньше:
+          Кажется, что нужно больше рекламы. Обычно деньги теряются раньше:
         </p>
         <ul className="mt-6 space-y-3">
           {[
@@ -297,7 +296,7 @@ function LandingPage() {
       <Section className="relative overflow-hidden bg-brand text-brand-foreground">
         <div className="pattern-dots absolute inset-0 -z-10 text-brand-foreground opacity-30" aria-hidden="true" />
         <h2 className="text-2xl font-extrabold leading-tight tracking-tight">
-          Именно поэтому мы создали тестовую неделю
+          Начинаем с тестовой недели
         </h2>
         <div className="mt-5 space-y-3.5 text-[15px] leading-relaxed">
           {[
@@ -315,7 +314,7 @@ function LandingPage() {
 
       {/* 5 EXPERT */}
       <Section className="bg-surface-2">
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Кто проводит тестовую неделю</h2>
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Кто ведет проект</h2>
         <div className="mt-5 overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all duration-300 hover:shadow-lg">
           <div className="relative overflow-hidden aspect-square w-full group">
             <img
@@ -348,7 +347,7 @@ function LandingPage() {
 
       {/* 6 DAYS */}
       <Section>
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что входит в тестовую неделю</h2>
+        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Что сделаем за 7 дней</h2>
         <ol className="mt-8 space-y-6 border-l-2 border-brand/20 pl-6 ml-2">
           {days.map((d) => (
             <li key={d.n} className="relative pl-1 group">
@@ -408,7 +407,7 @@ function LandingPage() {
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand/20 via-gold/15 to-brand/5 group-hover:from-brand/35 group-hover:via-gold/25 group-hover:to-brand/10 transition-all duration-300" aria-hidden="true" />
           <div className="relative rounded-3xl bg-card p-6">
             <div className="text-xs font-bold uppercase tracking-wider text-brand">Стоимость</div>
-            <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя маркетинга</h2>
+            <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя</h2>
             <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
 
             <ul className="mt-5 space-y-2.5">
@@ -429,7 +428,7 @@ function LandingPage() {
               <p><span className="font-bold">Гарантия.</span> Нет плана и точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
-              <WaCta source="price_block">Записаться на тестовую неделю</WaCta>
+              <WaCta source="price_block">Начать тестовую неделю</WaCta>
             </div>
 
           </div>
