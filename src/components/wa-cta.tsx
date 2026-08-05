@@ -33,6 +33,15 @@ export function WaCta({ children, className, ariaLabel, message }: Props) {
         } catch {
           /* noop */
         }
+        try {
+          (window as unknown as { ym?: (id: number, action: string, target: string) => void }).ym?.(
+            110625855,
+            "reachGoal",
+            "lead_submitted",
+          );
+        } catch {
+          /* noop */
+        }
       }}
 
       className={
