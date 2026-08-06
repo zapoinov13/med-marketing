@@ -142,7 +142,7 @@ function LandingPage() {
             
           </ul>
           <div className="mt-6">
-            <WaCta source="hero">Получить бесплатный разбор</WaCta>
+            <WaCta source="hero">Получить разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             После разбора можно начать неделю за 50 000 ₸
@@ -480,7 +480,7 @@ function LandingPage() {
             20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
           </p>
           <div className="mt-6">
-            <WaCta source="final_cta">Получить бесплатный разбор</WaCta>
+            <WaCta source="final_cta">Получить разбор</WaCta>
           </div>
 
         </div>
