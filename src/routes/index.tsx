@@ -137,7 +137,7 @@ function LandingPage() {
             <br />можно исправить в первую очередь.
           </p>
           <ul className="mt-4 space-y-3 text-[15px] text-ink">
-            <li className="flex items-start gap-3"><Check /> <span>Разбор вашей текущей рекламы<br />и воронки продаж</span></li>
+            <li className="flex items-start gap-3"><Check /> <span>Разбор текущей рекламы<br />и воронки продаж</span></li>
             <li className="flex items-start gap-3"><Check /> <span>точки роста конкретно<br />для вашего бизнеса</span></li>
             
           </ul>
