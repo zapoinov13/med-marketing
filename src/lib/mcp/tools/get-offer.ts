@@ -2,14 +2,14 @@ import { defineTool } from "@lovable.dev/mcp-js";
 
 export default defineTool({
   name: "get_offer",
-  title: "Получить оффер тестовой недели",
+  title: "Получить оффер недели",
   description:
-    "Возвращает детали оффера «Тестовая неделя маркетинга для бизнеса»: цену, длительность, что входит и итоговый результат.",
+    "Возвращает детали оффера «Неделя маркетинга для бизнеса»: цену, длительность, что входит и итоговый результат.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const offer = {
-      name: "Тестовая неделя маркетинга для бизнеса",
+      name: "Неделя маркетинга для бизнеса",
       price: { amount: 50000, currency: "KZT" },
       duration_days: 7,
       audience: "Владельцы и руководители бизнеса",
