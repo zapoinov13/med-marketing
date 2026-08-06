@@ -4,7 +4,7 @@ export default defineTool({
   name: "get_contact",
   title: "Контакты для записи",
   description:
-    "Возвращает способы связаться и записаться на бесплатный разбор компанийи или тестовую неделю маркетинга: WhatsApp, телефон, ссылка на сайт.",
+    "Возвращает способы связаться и записаться на бесплатный разбор компанийи или неделю маркетинга: WhatsApp, телефон, ссылка на сайт.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
