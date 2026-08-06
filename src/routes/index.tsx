@@ -203,8 +203,10 @@ function LandingPage() {
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-3.5">
           {[
-            { icon: "👤", title: "Веду проект лично 6 лет", desc: "Общаетесь со мной, а не с отделом продаж." },
-            { icon: "💰", title: "Фиксированная цена", desc: "Никаких доплат в процессе." },
+            { icon: "👤", title: "Веду проект лично", desc: "Общаетесь со мной, а не с отделом продаж." },
+            { icon: "📅", title: "6 лет в маркетинге", desc: "Работаю с бизнесами с 2019 года." },
+            { icon: "🏢", title: "Резиденты Astana Hub", desc: "Часть технопарка инноваций." },
+            { icon: "🚀", title: "Свои бизнесы", desc: "Запускал и развивал несколько собственных проектов." },
             { icon: "🛡", title: "Гарантия возврата", desc: "Нет результата — верну 50 000 ₸." },
           ].map((card) => (
             <div key={card.title} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
