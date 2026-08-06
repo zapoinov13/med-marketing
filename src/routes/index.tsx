@@ -480,7 +480,7 @@ function LandingPage() {
             20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
           </p>
           <div className="mt-6">
-            <WaCta source="final_cta">Получить бесплатный разбор</WaCta>
+            <WaCta source="final_cta">Получить разбор</WaCta>
           </div>
 
         </div>
