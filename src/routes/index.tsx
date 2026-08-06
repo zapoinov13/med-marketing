@@ -355,7 +355,7 @@ function LandingPage() {
               {[
                 "5+ лет в маркетинге и рекламе",
                 "50+ компаний работают по системе",
-                "Опыт коммерческого директора",
+                "Собственный бизнес",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 transition-all duration-200 hover:translate-x-0.5"><Check /> <span>{t}</span></li>
               ))}
