@@ -173,7 +173,7 @@ function LandingPage() {
       {/* 2 PROBLEM */}
       <Section className="bg-surface-2">
         <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему клиенты не приходят?
+          Почему клиенты не покупают?
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
           Кажется, что нужно больше рекламы. Обычно деньги теряются раньше:
