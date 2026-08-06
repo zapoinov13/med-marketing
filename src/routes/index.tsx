@@ -145,7 +145,7 @@ function LandingPage() {
             <WaCta source="hero">Получить разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
-            После разбора можно начать неделю за 50 000 ₸
+            После разбора можно обсудить сотрудничество
           </p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5">
