@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Тестовая неделя маркетинга для бизнеса — 50 000 ₸" },
+      { title: "Неделя маркетинга для бизнеса — 50 000 ₸" },
       {
         name: "description",
         content:
           "7 дней внедрений в вашем бизнесе: находим слабые места и запускаем систему привлечения клиентов. Кейс: +13 000 000 ₸ выручки.",
       },
       { name: "author", content: "Юрий Валерьевич" },
-      { property: "og:title", content: "Тестовая неделя маркетинга для бизнеса — 50 000 ₸" },
+      { property: "og:title", content: "Неделя маркетинга для бизнеса — 50 000 ₸" },
       {
         property: "og:description",
         content:
@@ -92,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Тестовая неделя маркетинга для бизнеса — 50 000 ₸" },
+      { name: "twitter:title", content: "Неделя маркетинга для бизнеса — 50 000 ₸" },
       { name: "twitter:description", content: "7 дней внедрений в вашем бизнесе: находим слабые места и запускаем систему привлечения клиентов. Кейс: +13 000 000 ₸ выручки." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/F2E0S3lJBVYSnzZtTqGycpPaVOB3/social-images/social-1783851860704-ChatGPT_Image_20_янв._2026_г.,_23_43_55.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/F2E0S3lJBVYSnzZtTqGycpPaVOB3/social-images/social-1783851860704-ChatGPT_Image_20_янв._2026_г.,_23_43_55.webp" },

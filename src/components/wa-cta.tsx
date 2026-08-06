@@ -21,7 +21,7 @@ export function WaCta({ children, className, ariaLabel, message, source }: Props
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={ariaLabel ?? "Записаться на тестовую неделю в WhatsApp"}
+      aria-label={ariaLabel ?? "Записаться на неделю в WhatsApp"}
       onClick={() => {
         try {
           window.fbq?.("track", "Lead");

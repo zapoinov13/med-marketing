@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Начните с тестовой недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста. Кейс: +13 000 000 ₸ выручки.",
+          "Начните с недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста. Кейс: +13 000 000 ₸ выручки.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
           provider: { "@type": "Person", name: "Юрий Валерьевич" },
           areaServed: "KZ",
           description:
-            "Начните с тестовой недели: аудит, стратегия, реклама, аналитика и план роста для вашего бизнеса.",
+            "Начните с недели: аудит, стратегия, реклама, аналитика и план роста для вашего бизнеса.",
           offers: {
             "@type": "Offer",
             price: "50000",
@@ -105,7 +105,7 @@ function LandingPage() {
           <br />в ваш бизнес
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
-          Начните с тестовой недели за 50 000 ₸. За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим план роста.
+          Начните с недели за 50 000 ₸. За 7 дней найдём, где вы теряете клиентов, запустим рекламу и дадим план роста.
         </p>
 
         <div className="mt-6 flex items-center gap-3.5 rounded-2xl border border-border/80 bg-card/90 p-4 shadow-card backdrop-blur-md transition-all duration-300 hover:shadow-lg">
@@ -145,7 +145,7 @@ function LandingPage() {
             <WaCta source="hero">Получить бесплатный разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
-            После разбора можно начать тестовую неделю за 50 000 ₸
+            После разбора можно начать неделю за 50 000 ₸
           </p>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5">
@@ -296,7 +296,7 @@ function LandingPage() {
       <Section className="relative overflow-hidden bg-brand text-brand-foreground">
         <div className="pattern-dots absolute inset-0 -z-10 text-brand-foreground opacity-30" aria-hidden="true" />
         <h2 className="text-2xl font-extrabold leading-tight tracking-tight">
-          Начинаем с тестовой недели
+          Начинаем с недели
         </h2>
         <div className="mt-5 space-y-3.5 text-[15px] leading-relaxed">
           {[
@@ -407,7 +407,7 @@ function LandingPage() {
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand/20 via-gold/15 to-brand/5 group-hover:from-brand/35 group-hover:via-gold/25 group-hover:to-brand/10 transition-all duration-300" aria-hidden="true" />
           <div className="relative rounded-3xl bg-card p-6">
             <div className="text-xs font-bold uppercase tracking-wider text-brand">Стоимость</div>
-            <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Тестовая неделя</h2>
+            <h2 className="mt-1.5 text-2xl font-extrabold text-ink tracking-tight">Неделя</h2>
             <div className="mt-4 text-5xl font-black text-brand tracking-tight">50 000 ₸</div>
 
             <ul className="mt-5 space-y-2.5">
@@ -428,7 +428,7 @@ function LandingPage() {
               <p><span className="font-bold">Гарантия.</span> Нет плана и точек роста — верну 50 000 ₸.</p>
             </div>
             <div className="mt-6">
-              <WaCta source="price_block">Начать тестовую неделю</WaCta>
+              <WaCta source="price_block">Начать неделю</WaCta>
             </div>
 
           </div>
