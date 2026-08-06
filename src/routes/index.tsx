@@ -142,7 +142,7 @@ function LandingPage() {
             
           </ul>
           <div className="mt-6">
-            <WaCta source="hero">Получить бесплатный разбор</WaCta>
+            <WaCta source="hero">Получить разбор</WaCta>
           </div>
           <p className="mt-3 text-center text-[12px] text-ink-muted">
             После разбора можно начать неделю за 50 000 ₸
