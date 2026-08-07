@@ -6,6 +6,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Briefcase,
+  Building2,
+  GraduationCap,
+  MapPin,
+  ShoppingBag,
+  Sparkles,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
