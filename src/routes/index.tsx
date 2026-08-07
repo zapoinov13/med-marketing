@@ -470,36 +470,6 @@ function LandingPage() {
         </div>
       </Section>
 
-      {/* 10 FAQ */}
-      <Section className="bg-surface-2">
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Частые вопросы</h2>
-        <Accordion type="single" collapsible className="mt-5 space-y-3">
-          <AccordionItem value="q1" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
-            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
-              За 7 дней будут клиенты?
-            </AccordionTrigger>
-            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
-              Главная цель недели — провести глубокую подготовку, внедрить ключевые изменения и дать бизнесу готовую систему для роста. В зависимости от этапа работ и готовности компании первые обращения могут появиться уже в процессе.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="q2" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
-            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
-              Это аудит?
-            </AccordionTrigger>
-            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
-              Нет. Мы не ограничиваемся рекомендациями — вместе с вами начинаем внедрение.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="q3" className="border border-border/80 bg-card rounded-xl px-4 shadow-sm overflow-hidden transition-all hover:border-brand/25">
-            <AccordionTrigger className="text-left text-[15px] font-bold text-ink py-4 hover:no-underline hover:text-brand transition-colors duration-250">
-              Вы работаете по всему Казахстану?
-            </AccordionTrigger>
-            <AccordionContent className="text-[14.5px] leading-relaxed text-ink-muted pb-4">
-              Да. Работаем онлайн с бизнесом любой ниши по всему Казахстану.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </Section>
 
       {/* 11 FINAL CTA */}
       <Section>
