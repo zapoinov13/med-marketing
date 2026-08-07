@@ -539,7 +539,7 @@ function LandingPage() {
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Отвечаю в течение 15 минут
           </div>
           <h2 className="mt-4 text-2xl font-extrabold leading-tight text-ink tracking-tight">
-            Начнём с бесплатного разбора
+            Начнём с разбора
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted">
             20 минут в WhatsApp. Покажу, где вы теряете клиентов. Без обязательств.
