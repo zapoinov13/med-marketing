@@ -380,8 +380,7 @@ function LandingPage() {
         <div className="text-center">
           <h2 className="text-2xl font-extrabold text-ink tracking-tight">Для кого подходит</h2>
           <p className="mt-2 text-[15px] leading-relaxed text-ink-muted whitespace-pre-line">
-            Работаем с бизнесами, где{"\u00a0"}
-            важен каждый клиент
+            {"Работаем с бизнесами, где\u00a0\nважен каждый клиент"}
           </p>
         </div>
         <div className="mt-6 grid grid-cols-2 gap-3">
