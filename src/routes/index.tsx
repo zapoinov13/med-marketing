@@ -258,19 +258,30 @@ function LandingPage() {
 
           <div className="mt-5 space-y-4">
             {[
-              { clinic: "Сеть услуг в Алматы", action: "Переупаковали услугу и перезапустили рекламу.", metric: "+42 клиента", sub: "за 1 месяц" },
-              { clinic: "Сервисная компания", action: "Внедрили скрипт продаж и аналитику.", metric: "×2,3", sub: "конверсия в визит" },
-              { clinic: "Онлайн-школа", action: "Сделали оффер и запустили таргет.", metric: "+5 800 000 ₸", sub: "за 6 недель" },
-            ].map((c) => (
-              <div key={c.clinic} className="rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-brand">{c.clinic}</div>
-                <p className="mt-2 text-[14px] text-ink-muted leading-relaxed">{c.action}</p>
-                <div className="mt-4 flex items-baseline gap-2 rounded-xl bg-brand-soft px-3.5 py-2.5">
-                  <span className="text-xl font-black text-brand tracking-tight">{c.metric}</span>
-                  <span className="text-[12px] font-medium text-ink-muted">{c.sub}</span>
+              { icon: MapPin, clinic: "Сеть услуг в Алматы", action: "Переупаковали услугу и перезапустили рекламу.", metric: "+42", sub: "клиента за 1 месяц" },
+              { icon: Briefcase, clinic: "Сервисная компания", action: "Внедрили скрипт продаж и аналитику.", metric: "×2,3", sub: "конверсия в визит" },
+              { icon: GraduationCap, clinic: "Онлайн-школа", action: "Сделали оффер и запустили таргет.", metric: "+5,8M", sub: "₸ за 6 недель" },
+            ].map((c) => {
+              const Icon = c.icon;
+              return (
+                <div key={c.clinic} className="group relative overflow-hidden rounded-2xl border border-border/80 bg-card p-5 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                  <div className="absolute top-0 right-0 h-24 w-24 translate-x-8 -translate-y-8 rounded-full bg-brand/5 transition-transform duration-500 group-hover:scale-150" aria-hidden="true" />
+                  <div className="relative flex items-start gap-3.5">
+                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <div className="flex-1">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-brand">{c.clinic}</div>
+                      <p className="mt-1.5 text-[14px] text-ink-muted leading-relaxed">{c.action}</p>
+                      <div className="mt-4 inline-flex items-baseline gap-2 rounded-xl bg-brand-soft px-4 py-2.5">
+                        <span className="text-xl font-black text-brand tracking-tight">{c.metric}</span>
+                        <span className="text-[12px] font-medium text-ink-muted">{c.sub}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </Section>
