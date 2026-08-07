@@ -205,48 +205,6 @@ function LandingPage() {
         </div>
       </Section>
 
-      {/* TRUST */}
-      <Section className="bg-surface-2 relative overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-brand/5 to-transparent pointer-events-none" />
-        <h2 className="text-2xl font-extrabold leading-tight text-ink tracking-tight">
-          Почему можно доверять
-        </h2>
-        <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">
-          Работаю на результат, а не на отчеты. Вот почему со мной работают бизнесы.
-        </p>
-
-        <div className="mt-6 grid grid-cols-3 gap-3">
-          {[
-            { value: "6+", label: "лет в маркетинге" },
-            { value: "50+", label: "компаний" },
-            { value: "13M+", label: "привлечено" },
-          ].map((stat) => (
-            <div key={stat.label} className="rounded-2xl bg-card border border-border/80 p-3 text-center shadow-card">
-              <div className="text-xl font-extrabold text-brand tracking-tight">{stat.value}</div>
-              <div className="mt-0.5 text-[11px] leading-tight text-ink-muted">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-4 grid grid-cols-1 gap-3.5">
-          {[
-            { icon: "👤", title: "Веду проект лично", desc: "Общаетесь со мной, а не с отделом продаж." },
-            { icon: "🏢", title: "Резиденты Astana Hub", desc: "Часть технопарка инноваций Казахстана." },
-            { icon: "🚀", title: "Свои бизнесы", desc: "Запускал и развивал несколько собственных проектов." },
-            { icon: "🛡", title: "Гарантия возврата", desc: "Нет результата — верну 50 000 ₸." },
-          ].map((card) => (
-            <div key={card.title} className="rounded-2xl border border-border/80 bg-card p-4 shadow-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-              <div className="flex items-start gap-3.5">
-                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-xl" aria-hidden>{card.icon}</span>
-                <div>
-                  <div className="text-[16px] font-extrabold text-ink leading-tight">{card.title}</div>
-                  <p className="mt-1 text-[14px] leading-relaxed text-ink-muted">{card.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
 
       {/* 3 CASE */}
       <Section>
