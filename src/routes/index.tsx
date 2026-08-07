@@ -6,6 +6,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Briefcase,
+  Building2,
+  GraduationCap,
+  MapPin,
+  ShoppingBag,
+  Sparkles,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -402,22 +410,60 @@ function LandingPage() {
 
       {/* 8 FOR WHOM */}
       <Section className="bg-surface-2">
-        <h2 className="text-2xl font-extrabold text-ink tracking-tight">Для кого подходит</h2>
-        <ul className="mt-5 grid grid-cols-2 gap-3">
+        <div className="text-center">
+          <h2 className="text-2xl font-extrabold text-ink tracking-tight">Для кого подходит</h2>
+          <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+            Работаем с бизнесами, где важен каждый клиент
+          </p>
+        </div>
+        <div className="mt-6 grid grid-cols-2 gap-3">
           {[
-            "Услуги и сервис",
-            "Онлайн-школы и эксперты",
-            "Розница и e-commerce",
-            "B2B-компании",
-            "Салоны и студии",
-            "Локальный бизнес",
-          ].map((t) => (
-            <li key={t} className="flex items-center gap-2.5 rounded-xl border border-border bg-card p-3.5 text-[14px] font-bold text-ink hover:border-brand/20 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200">
-              <span className="text-brand font-extrabold text-lg leading-none shrink-0">•</span>
-              <span>{t}</span>
-            </li>
+            {
+              title: "Услуги и сервис",
+              desc: "Находим клиентов под дорогие услуги",
+              icon: Briefcase,
+            },
+            {
+              title: "Онлайн-школы и эксперты",
+              desc: "Заполняем воронки продаж",
+              icon: GraduationCap,
+            },
+            {
+              title: "Розница и e-commerce",
+              desc: "Увеличиваем заявки и покупки",
+              icon: ShoppingBag,
+            },
+            {
+              title: "B2B-компании",
+              desc: "Приводим целевых партнеров",
+              icon: Building2,
+            },
+            {
+              title: "Салоны и студии",
+              desc: "Записываем клиентов на услуги",
+              icon: Sparkles,
+            },
+            {
+              title: "Локальный бизнес",
+              desc: "Привлекаем из вашего города",
+              icon: MapPin,
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/25 hover:shadow-md"
+            >
+              <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-gradient-to-br from-brand/10 to-gold/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
+              <div className="relative">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-soft to-brand/10 text-brand shadow-sm">
+                  <item.icon className="h-5 w-5" strokeWidth={2} />
+                </div>
+                <h3 className="mt-3 text-[14px] font-extrabold text-ink leading-tight">{item.title}</h3>
+                <p className="mt-1 text-[12px] leading-snug text-ink-muted">{item.desc}</p>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </Section>
 
       {/* 9 PRICE */}
