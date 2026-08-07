@@ -106,7 +106,7 @@ function LandingPage() {
       <Section className="relative overflow-hidden pt-12">
         <div className="bg-gradient-hero absolute inset-0 -z-10" aria-hidden="true" />
         <span className="inline-flex items-center rounded-full bg-brand-soft px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand border border-brand/10">
-          Приведем клиентов в ваш бизнес
+          ОТДЕЛ МАРКЕТИНГА ПОД КЛЮЧ
         </span>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
           Приведем клиентов
