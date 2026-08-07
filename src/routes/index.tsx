@@ -105,6 +105,9 @@ function LandingPage() {
       {/* 1 HERO */}
       <Section className="relative overflow-hidden pt-12">
         <div className="bg-gradient-hero absolute inset-0 -z-10" aria-hidden="true" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand-soft px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide text-brand">
+          <Sparkles className="h-3.5 w-3.5" /> Отдел маркетинга под ключ
+        </div>
         <h1 className="mt-5 text-[28px] font-extrabold leading-[1.15] text-ink sm:text-3xl tracking-tight">
           Приведем клиентов
           <br />в ваш бизнес
