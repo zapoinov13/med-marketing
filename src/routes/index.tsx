@@ -24,10 +24,22 @@ export const Route = createFileRoute("/")({
         content:
           "Начните с недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста. Кейс: +13 000 000 ₸ выручки.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:title", content: "Приведем клиентов в ваш бизнес — 50 000 ₸" },
+      {
+        property: "og:description",
+        content:
+          "Начните с недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста. Кейс: +13 000 000 ₸ выручки.",
+      },
+      { name: "twitter:title", content: "Приведем клиентов в ваш бизнес — 50 000 ₸" },
+      {
+        name: "twitter:description",
+        content:
+          "Начните с недели: найдем, где вы теряете клиентов, запустим рекламу и дадим план роста.",
+      },
+      { property: "og:url", content: "https://med-marketing.lovable.app/" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://med-marketing.lovable.app/" },
       { rel: "preload", as: "image", href: "/yuri.jpg", fetchpriority: "high" } as unknown as { rel: string; href: string },
     ],
     scripts: [
