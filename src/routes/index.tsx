@@ -124,7 +124,7 @@ function LandingPage() {
             height={48}
             loading="eager"
             decoding="async"
-            {...({ fetchpriority: "high" } as { fetchpriority: "high" })}
+            fetchPriority="high"
             className="h-12 w-12 rounded-full object-cover ring-2 ring-brand/15 shadow-sm"
           />
           <div>
