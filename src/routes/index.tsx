@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://med-marketing.lovable.app/" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://med-marketing.lovable.app/" },
       { rel: "preload", as: "image", href: "/yuri.jpg", fetchpriority: "high" } as unknown as { rel: string; href: string },
     ],
     scripts: [
